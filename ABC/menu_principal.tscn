@@ -71,6 +71,7 @@ texture = ExtResource( 8 )
 position = Vector2( 159.406, 489.044 )
 scale = Vector2( 2.50485, 2.0098 )
 frames = SubResource( 1 )
+frame = 2
 playing = true
 
 [node name="play_button" type="TextureButton" parent="."]
