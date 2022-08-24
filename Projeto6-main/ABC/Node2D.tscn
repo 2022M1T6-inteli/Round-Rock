@@ -1,0 +1,333 @@
+[gd_scene load_steps=38 format=2]
+
+[ext_resource path="res://mathieu-chauderlot-room-0017-layer-11.jpg" type="Texture" id=1]
+[ext_resource path="res://Protótipo batalha - visão geral/Cartas/carta1.png" type="Texture" id=2]
+[ext_resource path="res://Protótipo batalha - visão geral/Cartas/carta5.png" type="Texture" id=4]
+[ext_resource path="res://Protótipo batalha - visão geral/Cartas/carta2.png" type="Texture" id=5]
+[ext_resource path="res://Protótipo batalha - visão geral/Cartas/carta3.png" type="Texture" id=6]
+[ext_resource path="res://Protótipo batalha - visão geral/Cartas/carta4.png" type="Texture" id=8]
+[ext_resource path="res://Protótipo batalha - visão geral/Bosses/mago.png" type="Texture" id=9]
+[ext_resource path="res://Protótipo batalha - visão geral/Fundo/Caixa-fundo-cartas.png" type="Texture" id=10]
+[ext_resource path="res://Protótipo batalha - visão geral/Personagem/personagem1.png" type="Texture" id=11]
+[ext_resource path="res://carta1.gd" type="Script" id=12]
+[ext_resource path="res://TextureProgress.gd" type="Script" id=13]
+[ext_resource path="res://Protótipo batalha - visão geral/HealthBar/health-under.png" type="Texture" id=14]
+[ext_resource path="res://Protótipo batalha - visão geral/HealthBar/health-over.png" type="Texture" id=15]
+
+[sub_resource type="AtlasTexture" id=2]
+atlas = ExtResource( 9 )
+region = Rect2( 0, 0, 80, 80 )
+
+[sub_resource type="AtlasTexture" id=3]
+atlas = ExtResource( 9 )
+region = Rect2( 80, 0, 80, 80 )
+
+[sub_resource type="AtlasTexture" id=4]
+atlas = ExtResource( 9 )
+region = Rect2( 160, 0, 80, 80 )
+
+[sub_resource type="AtlasTexture" id=5]
+atlas = ExtResource( 9 )
+region = Rect2( 240, 0, 80, 80 )
+
+[sub_resource type="AtlasTexture" id=6]
+atlas = ExtResource( 9 )
+region = Rect2( 320, 0, 80, 80 )
+
+[sub_resource type="AtlasTexture" id=7]
+atlas = ExtResource( 9 )
+region = Rect2( 400, 0, 80, 80 )
+
+[sub_resource type="AtlasTexture" id=8]
+atlas = ExtResource( 9 )
+region = Rect2( 480, 0, 80, 80 )
+
+[sub_resource type="AtlasTexture" id=9]
+atlas = ExtResource( 9 )
+region = Rect2( 560, 0, 80, 80 )
+
+[sub_resource type="AtlasTexture" id=10]
+atlas = ExtResource( 9 )
+region = Rect2( 640, 0, 80, 80 )
+
+[sub_resource type="AtlasTexture" id=11]
+atlas = ExtResource( 9 )
+region = Rect2( 720, 0, 80, 80 )
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [ SubResource( 2 ), SubResource( 3 ), SubResource( 4 ), SubResource( 5 ), SubResource( 6 ), SubResource( 7 ), SubResource( 8 ), SubResource( 9 ), SubResource( 10 ), SubResource( 11 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[sub_resource type="AtlasTexture" id=12]
+atlas = ExtResource( 11 )
+region = Rect2( 0, 0, 160, 111 )
+
+[sub_resource type="AtlasTexture" id=13]
+atlas = ExtResource( 11 )
+region = Rect2( 160, 0, 160, 111 )
+
+[sub_resource type="AtlasTexture" id=14]
+atlas = ExtResource( 11 )
+region = Rect2( 320, 0, 160, 111 )
+
+[sub_resource type="AtlasTexture" id=15]
+atlas = ExtResource( 11 )
+region = Rect2( 480, 0, 160, 111 )
+
+[sub_resource type="AtlasTexture" id=16]
+atlas = ExtResource( 11 )
+region = Rect2( 640, 0, 160, 111 )
+
+[sub_resource type="AtlasTexture" id=17]
+atlas = ExtResource( 11 )
+region = Rect2( 800, 0, 160, 111 )
+
+[sub_resource type="AtlasTexture" id=18]
+atlas = ExtResource( 11 )
+region = Rect2( 960, 0, 160, 111 )
+
+[sub_resource type="AtlasTexture" id=19]
+atlas = ExtResource( 11 )
+region = Rect2( 1120, 0, 160, 111 )
+
+[sub_resource type="SpriteFrames" id=20]
+animations = [ {
+"frames": [ SubResource( 12 ), SubResource( 13 ), SubResource( 14 ), SubResource( 15 ), SubResource( 16 ), SubResource( 17 ), SubResource( 18 ), SubResource( 19 ) ],
+"loop": true,
+"name": "default",
+"speed": 12.0
+} ]
+
+[sub_resource type="SpriteFrames" id=21]
+animations = [ {
+"frames": [  ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[sub_resource type="RectangleShape2D" id=24]
+extents = Vector2( 649.5, 212.5 )
+
+[sub_resource type="RectangleShape2D" id=22]
+extents = Vector2( 61, 45.875 )
+
+[sub_resource type="RectangleShape2D" id=23]
+extents = Vector2( 56.5, 86 )
+
+[node name="Node2D" type="Node2D"]
+position = Vector2( 5, 0 )
+script = ExtResource( 13 )
+
+[node name="Mathieu-chauderlot-room-0017-layer-11" type="Sprite" parent="."]
+position = Vector2( 616, 347 )
+scale = Vector2( 0.7, 0.7 )
+texture = ExtResource( 1 )
+
+[node name="Caixa-fundo-cartas" type="Sprite" parent="."]
+position = Vector2( 643, 608 )
+scale = Vector2( 4.48764, 1.50485 )
+texture = ExtResource( 10 )
+
+[node name="Mago" type="AnimatedSprite" parent="."]
+position = Vector2( 991, 341 )
+scale = Vector2( 3, 3 )
+frames = SubResource( 1 )
+frame = 9
+playing = true
+
+[node name="Personagem1" type="AnimatedSprite" parent="."]
+position = Vector2( 257, 324 )
+scale = Vector2( 3, 3 )
+frames = SubResource( 20 )
+frame = 3
+playing = true
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+frames = SubResource( 21 )
+
+[node name="Button" type="Button" parent="."]
+margin_left = 20.0
+margin_top = 23.0
+margin_right = 120.0
+margin_bottom = 73.0
+text = "VOLTAR"
+
+[node name="Button2" type="Button" parent="."]
+margin_right = 12.0
+margin_bottom = 20.0
+
+[node name="AreaDeAcao" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AreaDeAcao"]
+position = Vector2( 639.5, 202.5 )
+shape = SubResource( 24 )
+
+[node name="YSort" type="YSort" parent="."]
+
+[node name="Carta1" type="Area2D" parent="YSort"]
+position = Vector2( 304, 600 )
+script = ExtResource( 12 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Carta" type="TextureButton" parent="YSort/Carta1"]
+margin_left = -73.0
+margin_top = -94.0
+margin_right = 629.0
+margin_bottom = 906.0
+rect_scale = Vector2( 0.2, 0.2 )
+texture_normal = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="YSort/Carta1"]
+position = Vector2( 2, 44.75 )
+shape = SubResource( 22 )
+
+[node name="RigidBody2D" type="RigidBody2D" parent="YSort/Carta1"]
+position = Vector2( 5, -2 )
+sleeping = true
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="YSort/Carta1/RigidBody2D"]
+position = Vector2( -3, 14 )
+shape = SubResource( 23 )
+
+[node name="Carta2" type="Area2D" parent="YSort"]
+position = Vector2( 461, 600 )
+script = ExtResource( 12 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Carta" type="TextureButton" parent="YSort/Carta2"]
+margin_left = -73.0
+margin_top = -94.0
+margin_right = 629.0
+margin_bottom = 906.0
+rect_scale = Vector2( 0.2, 0.2 )
+texture_normal = ExtResource( 5 )
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="YSort/Carta2"]
+position = Vector2( 2, 44.75 )
+shape = SubResource( 22 )
+
+[node name="RigidBody2D" type="RigidBody2D" parent="YSort/Carta2"]
+position = Vector2( 5, -2 )
+sleeping = true
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="YSort/Carta2/RigidBody2D"]
+position = Vector2( -3, 14 )
+shape = SubResource( 23 )
+
+[node name="Carta3" type="Area2D" parent="YSort"]
+position = Vector2( 622, 600 )
+script = ExtResource( 12 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Carta" type="TextureButton" parent="YSort/Carta3"]
+margin_left = -73.0
+margin_top = -94.0
+margin_right = 629.0
+margin_bottom = 906.0
+rect_scale = Vector2( 0.2, 0.2 )
+texture_normal = ExtResource( 6 )
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="YSort/Carta3"]
+position = Vector2( 3, 44 )
+shape = SubResource( 22 )
+
+[node name="RigidBody2D" type="RigidBody2D" parent="YSort/Carta3"]
+position = Vector2( 5, -2 )
+sleeping = true
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="YSort/Carta3/RigidBody2D"]
+position = Vector2( -3, 14 )
+shape = SubResource( 23 )
+
+[node name="Carta4" type="Area2D" parent="YSort"]
+position = Vector2( 772, 600 )
+script = ExtResource( 12 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Carta" type="TextureButton" parent="YSort/Carta4"]
+margin_left = -73.0
+margin_top = -94.0
+margin_right = 629.0
+margin_bottom = 906.0
+rect_scale = Vector2( 0.2, 0.2 )
+texture_normal = ExtResource( 8 )
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="YSort/Carta4"]
+position = Vector2( 3, 46.5 )
+shape = SubResource( 22 )
+
+[node name="RigidBody2D" type="RigidBody2D" parent="YSort/Carta4"]
+position = Vector2( 5, -2 )
+sleeping = true
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="YSort/Carta4/RigidBody2D"]
+position = Vector2( -3, 14 )
+shape = SubResource( 23 )
+
+[node name="Carta5" type="Area2D" parent="YSort"]
+position = Vector2( 926, 600 )
+script = ExtResource( 12 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Carta" type="TextureButton" parent="YSort/Carta5"]
+margin_left = -73.0
+margin_top = -94.0
+margin_right = 629.0
+margin_bottom = 906.0
+rect_scale = Vector2( 0.2, 0.2 )
+texture_normal = ExtResource( 4 )
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="YSort/Carta5"]
+position = Vector2( -1, 46.875 )
+shape = SubResource( 22 )
+
+[node name="RigidBody2D" type="RigidBody2D" parent="YSort/Carta5"]
+position = Vector2( 5, -2 )
+sleeping = true
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="YSort/Carta5/RigidBody2D"]
+position = Vector2( -3, 14 )
+shape = SubResource( 23 )
+
+[node name="HealthBar" type="TextureProgress" parent="."]
+margin_left = 842.0
+margin_top = 39.0
+margin_right = 909.0
+margin_bottom = 50.0
+rect_scale = Vector2( 5, 5 )
+texture_under = ExtResource( 14 )
+texture_progress = ExtResource( 15 )
+
+[connection signal="pressed" from="Button" to="." method="_on_Button_pressed"]
+[connection signal="pressed" from="Button2" to="." method="_on_Button2_pressed"]
+[connection signal="area_exited" from="AreaDeAcao" to="." method="_on_AreaDeAcao1_area_exited"]
