@@ -1,0 +1,40 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://carta1.gd" type="Script" id=1]
+[ext_resource path="res://Protótipo batalha - visão geral/Cartas/carta1.png" type="Texture" id=2]
+
+[sub_resource type="RectangleShape2D" id=22]
+extents = Vector2( 61, 45.875 )
+
+[sub_resource type="RectangleShape2D" id=23]
+extents = Vector2( 56.5, 86 )
+
+[node name="Carta1" type="Area2D"]
+position = Vector2( 320, 598 )
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Carta" type="TextureButton" parent="."]
+margin_left = -73.0
+margin_top = -94.0
+margin_right = 629.0
+margin_bottom = 906.0
+rect_scale = Vector2( 0.2, 0.2 )
+texture_normal = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( -0.6875, 49 )
+shape = SubResource( 22 )
+
+[node name="RigidBody2D" type="RigidBody2D" parent="."]
+position = Vector2( 5, -2 )
+sleeping = true
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="RigidBody2D"]
+position = Vector2( -3, 14 )
+shape = SubResource( 23 )

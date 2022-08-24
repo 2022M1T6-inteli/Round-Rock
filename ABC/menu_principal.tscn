@@ -59,7 +59,7 @@ autoplay = true
 position = Vector2( 954.032, 578.805 )
 scale = Vector2( 1.01176, 1.00537 )
 frames = SubResource( 4 )
-frame = 10
+frame = 11
 playing = true
 
 [node name="Castledell" type="Sprite" parent="."]
