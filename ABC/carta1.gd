@@ -5,7 +5,6 @@ extends Node2D
 # var a = 2
 # var b = "text"
 
-
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	pass # Replace with function body.
@@ -19,7 +18,6 @@ func _process(delta):
 		#$Carta1.visible=false
 		var ponteiro = get_global_mouse_position()-global_position
 		global_position += ponteiro
-		
 	pass
 
 func _on_Button_pressed():

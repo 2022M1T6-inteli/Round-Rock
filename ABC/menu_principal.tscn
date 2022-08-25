@@ -59,7 +59,7 @@ autoplay = true
 position = Vector2( 954.032, 578.805 )
 scale = Vector2( 1.01176, 1.00537 )
 frames = SubResource( 4 )
-frame = 11
+frame = 13
 playing = true
 
 [node name="Castledell" type="Sprite" parent="."]
@@ -71,7 +71,6 @@ texture = ExtResource( 8 )
 position = Vector2( 159.406, 489.044 )
 scale = Vector2( 2.50485, 2.0098 )
 frames = SubResource( 1 )
-frame = 2
 playing = true
 
 [node name="play_button" type="TextureButton" parent="."]
