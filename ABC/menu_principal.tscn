@@ -1,4 +1,4 @@
-[gd_scene load_steps=30 format=2]
+[gd_scene load_steps=33 format=2]
 
 [ext_resource path="res://menu_principal.gd" type="Script" id=1]
 [ext_resource path="res://assets/back_7.png" type="Texture" id=2]
@@ -8,15 +8,16 @@
 [ext_resource path="res://assets/flying_dragon-gold 1.png" type="Texture" id=6]
 [ext_resource path="res://assets/flying_dragon-gold 3.png" type="Texture" id=7]
 [ext_resource path="res://assets/castledell.png" type="Texture" id=8]
-[ext_resource path="res://assets/botao jogar esc.png" type="Texture" id=9]
-[ext_resource path="res://assets/botao jogar1.png" type="Texture" id=10]
-[ext_resource path="res://assets/botao configurações1.png" type="Texture" id=11]
-[ext_resource path="res://assets/botao configurações esc.png" type="Texture" id=12]
-[ext_resource path="res://assets/botao sair1.png" type="Texture" id=13]
-[ext_resource path="res://assets/botao sair esc.png" type="Texture" id=14]
+[ext_resource path="res://assets/playButton.png" type="Texture" id=9]
+[ext_resource path="res://assets/settingsButton.png" type="Texture" id=10]
+[ext_resource path="res://assets/quitButto.png" type="Texture" id=11]
+[ext_resource path="res://assets/playButtonpressed.png" type="Texture" id=12]
+[ext_resource path="res://assets/settingsButtonpressed.png" type="Texture" id=13]
+[ext_resource path="res://assets/quitButtonpressed.png" type="Texture" id=14]
 [ext_resource path="res://medieval sound.mp3" type="AudioStream" id=15]
 [ext_resource path="res://assets/back_3.png" type="Texture" id=16]
 [ext_resource path="res://assets/back_4.png" type="Texture" id=17]
+[ext_resource path="res://assets/quitButtonhover.png" type="Texture" id=18]
 [ext_resource path="res://assets/back_5.png" type="Texture" id=19]
 [ext_resource path="res://assets/back_6.png" type="Texture" id=20]
 [ext_resource path="res://assets/back_8.png" type="Texture" id=21]
@@ -26,6 +27,8 @@
 [ext_resource path="res://assets/back_11.png" type="Texture" id=25]
 [ext_resource path="res://assets/back_12.png" type="Texture" id=26]
 [ext_resource path="res://assets/back_9.png" type="Texture" id=27]
+[ext_resource path="res://assets/settingsButtonhover.png" type="Texture" id=28]
+[ext_resource path="res://assets/playButtonhover.png" type="Texture" id=29]
 
 [sub_resource type="SpriteFrames" id=4]
 animations = [ {
@@ -59,7 +62,7 @@ autoplay = true
 position = Vector2( 954.032, 578.805 )
 scale = Vector2( 1.01176, 1.00537 )
 frames = SubResource( 4 )
-frame = 13
+frame = 1
 playing = true
 
 [node name="Castledell" type="Sprite" parent="."]
@@ -71,6 +74,7 @@ texture = ExtResource( 8 )
 position = Vector2( 159.406, 489.044 )
 scale = Vector2( 2.50485, 2.0098 )
 frames = SubResource( 1 )
+frame = 2
 playing = true
 
 [node name="play_button" type="TextureButton" parent="."]
@@ -79,19 +83,21 @@ margin_top = 449.272
 margin_right = 1055.33
 margin_bottom = 518.272
 rect_scale = Vector2( 1.27532, 1.59339 )
-texture_normal = ExtResource( 10 )
-texture_pressed = ExtResource( 9 )
+texture_normal = ExtResource( 9 )
+texture_pressed = ExtResource( 12 )
+texture_hover = ExtResource( 29 )
 expand = true
 stretch_mode = 6
 
-[node name="config_button" type="TextureButton" parent="."]
+[node name="settings_button" type="TextureButton" parent="."]
 margin_left = 783.331
 margin_top = 590.272
 margin_right = 1055.33
 margin_bottom = 659.272
 rect_scale = Vector2( 1.27987, 1.5894 )
-texture_normal = ExtResource( 11 )
-texture_pressed = ExtResource( 12 )
+texture_normal = ExtResource( 10 )
+texture_pressed = ExtResource( 13 )
+texture_hover = ExtResource( 28 )
 texture_focused = SubResource( 3 )
 expand = true
 stretch_mode = 6
@@ -102,12 +108,13 @@ margin_top = 729.272
 margin_right = 1056.33
 margin_bottom = 798.272
 rect_scale = Vector2( 1.27161, 1.61799 )
-texture_normal = ExtResource( 13 )
+texture_normal = ExtResource( 11 )
 texture_pressed = ExtResource( 14 )
+texture_hover = ExtResource( 18 )
 expand = true
 stretch_mode = 6
 
 [connection signal="pressed" from="play_button" to="." method="_on_play_button_pressed"]
-[connection signal="mouse_entered" from="config_button" to="." method="_on_config_button_mouse_entered"]
-[connection signal="pressed" from="config_button" to="." method="_on_config_button_pressed"]
+[connection signal="mouse_entered" from="settings_button" to="." method="_on_config_button_mouse_entered"]
+[connection signal="pressed" from="settings_button" to="." method="_on_config_button_pressed"]
 [connection signal="pressed" from="quit_button" to="." method="_on_quit_button_pressed"]
