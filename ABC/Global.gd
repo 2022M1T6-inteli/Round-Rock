@@ -5,6 +5,8 @@ var playerPosition
 var enemyPosition
 var attack
 var moveback
+var run
+var numberCard
 
 
 # Called when the node enters the scene tree for the first time.
