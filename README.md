@@ -30,8 +30,8 @@ Para acessar o jogo diretamente do seu navegador entre no seguinte link: [http:/
 
 |--> documentos<br>
   &emsp;|--> outros <br>
-  &emsp;| T<SUBSTITUIR_PELO_NÚMERO_DA_TURMA>_G<SUBSTITUIR_PELO_NÚMERO_DO_GRUPO>_Game_Design_Document.docx<br>
-  &emsp;| T<SUBSTITUIR_PELO_NÚMERO_DA_TURMA>_G<SUBSTITUIR_PELO_NÚMERO_DO_GRUPO>_Game_Design_Document.pdf<br>
+  &emsp;| T6_G6_Game_Design_Document.docx<br>
+  &emsp;| T6_G6_Game_Design_Document.pdf<br>
 |--> executáveis <br>
   &emsp;|--> HTML <br>
   &emsp;|--> Windows <br>
