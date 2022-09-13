@@ -20,7 +20,7 @@
 
 ## 📝 Descrição
 
-Ensinar através de um jogo lúdico o modelo de produto para novos funcionários da DELL
+Ensinar através de um jogo lúdico de cartas de raciocínio e lógica, estilo medieval, o modelo de produto para novos funcionários da DELL
 
 ## 🎮 Jogue agora
 
