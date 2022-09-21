@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/sfx_step_grass_l_1.mp3-423ddfcfbb5cdd85cfcf311d8ec4bf2a.mp3str"
+
+[deps]
+
+source_file="res://assets/maps/sfx_step_grass_l_1.mp3"
+dest_files=[ "res://.import/sfx_step_grass_l_1.mp3-423ddfcfbb5cdd85cfcf311d8ec4bf2a.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

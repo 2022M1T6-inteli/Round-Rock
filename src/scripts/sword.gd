@@ -1,0 +1,14 @@
+extends Area2D
+
+export var speed = 300
+
+
+# Called when the node enters the scene tree for the first time.
+func _ready():
+	pass # Replace with function body.
+
+func _process(delta):
+	position.x -= speed * delta
+	if position.x < 150:
+		queue_free() 
+		GlobalBattle.cantClick = false

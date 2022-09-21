@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/shield_DukeStone.wav-7eee6cf8a3bf0cc6fe96c8281e72fedf.sample"
+
+[deps]
+
+source_file="res://assets/sounds/shield_DukeStone.wav"
+dest_files=[ "res://.import/shield_DukeStone.wav-7eee6cf8a3bf0cc6fe96c8281e72fedf.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0
