@@ -85,7 +85,7 @@ corretamente.
 
 <b>HTML:</b>
 
-Não há instalação! Baixe os arquivos disponíveis em [https://github.com/2022M1T6/Projeto6/tree/main/execut%C3%A1veis/HTML]() e execute-o como uma página da web (através de algum navegador).
+Não há instalação! Baixe os arquivos disponíveis em [https://github.com/2022M1T6/Projeto6/tree/main/executáveis/HTML]() e execute-o como uma página da web (através de algum navegador).
 
 ```sh
 Dependendo de suas configurações de firewall, talvez seja necessário
