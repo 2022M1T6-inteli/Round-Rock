@@ -7,7 +7,7 @@
 # CastleDell
 
 ## Round Rock
-<img src="![Round](https://user-images.githubusercontent.com/110630077/192342953-a32f3547-0c9b-4734-b3d9-a85f759b3b1e.png)" alt="Round Rock" border="0">
+<img src="https://user-images.githubusercontent.com/110630077/192342953-a32f3547-0c9b-4734-b3d9-a85f759b3b1e.png" alt="Round Rock" border="0">
 
 ## Integrantes:
 - <a href="https://www.linkedin.com/in/enya-oliveira-636566240/">Enya Oliveira Arruda</a>
