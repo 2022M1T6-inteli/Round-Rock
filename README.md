@@ -94,8 +94,8 @@ calmente.
 ## 🗃 Histórico de lançamentos
 
 * 0.9 - 30/09/2022
- * Replicamento de código
- * Unificação de cenas
+  * Replicamento de código
+  * Unificação de cenas
  * Correção de bugs
  * Atualização e ajustes no GDD
  * O terceiro lançamento adequado
