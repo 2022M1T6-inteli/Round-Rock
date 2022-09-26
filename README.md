@@ -93,18 +93,39 @@ calmente.
 
 ## 🗃 Histórico de lançamentos
 
-* 0.2.1 - 25/01/2022
-    * MUDANÇA: Atualização de docs (código do módulo permanece inalterado)
-* 0.2.0 - 15/01/2022
-    * MUDANÇA: Remove `setDefaultXYZ()`
-    * ADD: Adiciona `init()`
-* 0.1.1 - 11/01/2022
-    * CONSERTADO: Crash quando chama `baz()` (Obrigado @NomeDoContribuidorGeneroso!)
-* 0.1.0 - 10/01/2022
-    * O primeiro lançamento adequado
-    * MUDANÇA: Renomeia `foo()` para `bar()`
-* 0.0.1 - 01/01/2022
-    * Trabalho em andamento
+* 0.9 - 30/09/2022
+ * Replicamento de código
+ * Unificação de cenas
+ * Correção de bugs
+ * Atualização e ajustes no GDD
+ * O terceiro lançamento adequado
+* 0.8 - 23/09/2022
+ * Modularização do jogo
+ * Correção de bugs
+ * Atualização no GDD
+* 0.7 - 16/09/2022
+ * Correção de bugs
+ * Atualização no GDD
+* 0.6 - 09/09/2022
+ * Primeira cena de jogo plataforma 2D e movimentação do personagem unidas
+ * Melhoria na cena de batalha de cartas
+ * Atualização no GDD
+* 0.5 - 02/09/2022
+ * Organização das pastas
+ * O segundo lançamento adequado
+ * Atualização no GDD
+* 0.4 - 26/08/2022
+ * Atualização do README
+ * Atualização e ajustes no GDD
+* 0.3 - 19/08/2022
+ * Cenas de menu inicial e batalha de cartas foram unidas
+ * Atualização no GDD]
+* 0.2 - 12/08/2022
+ * O primeiro lançamento adequado
+ * Cena de menu inicial
+ * Atualização no GDD
+* 0.1 - 31/07/2022
+ * Criação do repositório
 
 ## 📋 Licença/License
 
