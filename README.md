@@ -75,7 +75,7 @@ Instruções para a configuração do ambiente de desenvolvimento:
 
 <b>Windows:</b>
 
-Não há instalação, apenas executável. Baixe os arquivos disponíveis em [https://github.com/.../link/para/seus/binários/windows]() e execute "Nome_do_seu_arquivo.exe" como qualquer outro programa.
+Não há instalação, apenas executável. Baixe os arquivos disponíveis em [https://github.com/2022M1T6/Projeto6/tree/main/executaveis/Windows]() e execute "Nome_do_seu_arquivo.exe" como qualquer outro programa.
 
 ```
 Observe que é necessário que o arquivo "Nome_do_seu_arquivo.pck" esteja
