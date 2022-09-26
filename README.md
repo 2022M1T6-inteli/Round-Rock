@@ -5,6 +5,7 @@
 </p>
 
 # CastleDell
+<img src="https://user-images.githubusercontent.com/110630077/192343527-26b8b758-5689-4db3-9931-d19c1aab33ff.png" alt="CastleDell" border="0">
 
 ## Round Rock
 <img src="https://user-images.githubusercontent.com/110630077/192342953-a32f3547-0c9b-4734-b3d9-a85f759b3b1e.png" alt="Round Rock" border="0">
