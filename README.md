@@ -101,6 +101,7 @@ calmente.
   * Correção de bugs
   * Atualização e ajustes no GDD
   * O terceiro lançamento adequado
+  * Deploy no GitPages
 * 0.8 - 23/09/2022
   * Modularização do jogo
   * Correção de bugs
