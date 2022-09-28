@@ -75,7 +75,7 @@ Instruções para a configuração do ambiente de desenvolvimento:
 
 <b>Windows:</b>
 
-Não há instalação, apenas executável. Baixe os arquivos disponíveis em [https://github.com/.../link/para/seus/binários/windows]() e execute "Nome_do_seu_arquivo.exe" como qualquer outro programa.
+Não há instalação, apenas executável. Baixe os arquivos disponíveis em [https://github.com/2022M1T6/Projeto6/tree/main/executaveis/Windows]() e execute "Nome_do_seu_arquivo.exe" como qualquer outro programa.
 
 ```
 Observe que é necessário que o arquivo "Nome_do_seu_arquivo.pck" esteja
@@ -85,7 +85,7 @@ corretamente.
 
 <b>HTML:</b>
 
-Não há instalação! Baixe os arquivos disponíveis em [https://github.com/2022M1T6/Projeto6/tree/main/executáveis/HTML]() e execute-o como uma página da web (através de algum navegador).
+Não há instalação! Baixe os arquivos disponíveis em [https://github.com/2022M1T6/Projeto6/tree/main/executaveis/HTML]() e execute-o como uma página da web (através de algum navegador).
 
 ```sh
 Dependendo de suas configurações de firewall, talvez seja necessário
