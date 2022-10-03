@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/wood-hard-hit.mp3-886ec411ed823912f7512c3f144507d7.mp3str"
+
+[deps]
+
+source_file="res://assets/sounds/wood-hard-hit.mp3"
+dest_files=[ "res://.import/wood-hard-hit.mp3-886ec411ed823912f7512c3f144507d7.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

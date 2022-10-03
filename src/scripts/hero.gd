@@ -7,8 +7,10 @@ var moveFoward = false
 var moveBack = false
 var attack = false
 onready var originalPosition = position
+export var sceneToGo = ""
 
 func _physics_process(delta):
+	win()
 	realDeath()
 	goAttack()
 	moveBack()
@@ -41,6 +43,7 @@ func goAttack():
 	if moveFoward:
 		run()
 		position.x += 4
+		$heroAnimation/hurtBox.visible = false
 		$attack.play()
 	elif attack:
 		
@@ -52,12 +55,14 @@ func goAttack():
 func moveBack():
 	if moveBack:
 		run()
+		$heroAnimation/hurtBox.visible = true
 		$heroAnimation.flip_h = true
 		position.x -= 4
 		if position.x <= originalPosition.x:
 			moveBack = false
 			idle()
 			$heroAnimation.flip_h = false
+			
 			GlobalBattle.cantClick = false
 
 #analyses if the hero is dead
@@ -67,6 +72,7 @@ func realDeath():
 		moveFoward = false
 		moveBack = false
 		attack = false
+		get_parent().get_node("gameOver").gameOver()
 		yield(get_tree().create_timer(1.5), "timeout")
 		modulate.a = lerp(modulate.a, 0, 0.01)
 		if floor(modulate.a8) == 0:
@@ -89,6 +95,10 @@ func _on_hitBox_area_entered(area):
 #when the enemy's collision shape colides against the hero's, activates the demage animation
 func _on_hurtBox_area_entered(area):
 	if position == originalPosition:
+		if GlobalBattle.catacombs:
+			yield(get_tree().create_timer(0.3), "timeout")
+		elif GlobalBattle.sanctuary:
+			yield(get_tree().create_timer(0.5), "timeout")
 		damage()
 		$damage.play()
 		decreaseLife(GlobalBattle.enemyDamage)
@@ -104,3 +114,10 @@ func _on_heroAnimation_animation_finished():
 		idle()
 		GlobalBattle.cantClick = false
 
+func win():
+	if not GlobalBattle.enemyAlive:
+		if position == originalPosition:
+			yield(get_tree().create_timer(1.5), "timeout")
+			moveFoward = true
+		if position.x > 1200:
+				TransitionScreen.FadeInto(sceneToGo)

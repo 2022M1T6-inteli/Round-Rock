@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/sword_DukeStone.wav-ed13aee4ca08df961d7cb41613fe970d.sample"
+
+[deps]
+
+source_file="res://assets/sword_DukeStone.wav"
+dest_files=[ "res://.import/sword_DukeStone.wav-ed13aee4ca08df961d7cb41613fe970d.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

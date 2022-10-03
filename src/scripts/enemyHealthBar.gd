@@ -4,9 +4,10 @@ var visibleShield = false
 
 func _physics_process(delta):
 	showShield(delta)
+	
 
 func _ready():
-	$HealthBar.value = 100
+	$HealthBar.value = 20
 	$shield.modulate.a = 0
 
 func decreaseLife(value):

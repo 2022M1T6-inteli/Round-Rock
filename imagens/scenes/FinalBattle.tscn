@@ -1,0 +1,165 @@
+[gd_scene load_steps=17 format=2]
+
+[ext_resource path="res://FinalBattleBG.png" type="Texture" id=1]
+[ext_resource path="res://scripts/enemyHealthBar.gd" type="Script" id=2]
+[ext_resource path="res://scenes/deployment.tscn" type="PackedScene" id=3]
+[ext_resource path="res://scripts/cardData.gd" type="Script" id=4]
+[ext_resource path="res://scenes/healthBar.tscn" type="PackedScene" id=5]
+[ext_resource path="res://scenes/wizard.tscn" type="PackedScene" id=6]
+[ext_resource path="res://scenes/gameOver.tscn" type="PackedScene" id=7]
+[ext_resource path="res://scenes/hero.tscn" type="PackedScene" id=8]
+[ext_resource path="res://scenes/shake.tscn" type="PackedScene" id=9]
+[ext_resource path="res://scripts/enemyData.gd" type="Script" id=10]
+[ext_resource path="res://assets/sounds/ockaie_temple.ogg" type="AudioStream" id=11]
+[ext_resource path="res://assets/shield/shield.png" type="Texture" id=12]
+[ext_resource path="res://assets/buttonEndTurn.png" type="Texture" id=13]
+[ext_resource path="res://assets/buttonEndTurnEscuro.png" type="Texture" id=14]
+[ext_resource path="res://scenes/initCards.gd" type="Script" id=15]
+
+[sub_resource type="TileSet" id=1]
+1/name = "FinalBattleBG.png 1"
+1/texture = ExtResource( 1 )
+1/tex_offset = Vector2( 0, 0 )
+1/modulate = Color( 1, 1, 1, 1 )
+1/region = Rect2( 64, 208, 32, 24 )
+1/tile_mode = 0
+1/occluder_offset = Vector2( 0, 0 )
+1/navigation_offset = Vector2( 0, 0 )
+1/shape_offset = Vector2( 0, 0 )
+1/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+1/shape_one_way = false
+1/shape_one_way_margin = 0.0
+1/shapes = [  ]
+1/z_index = 0
+2/name = "FinalBattleBG.png 2"
+2/texture = ExtResource( 1 )
+2/tex_offset = Vector2( 0, 0 )
+2/modulate = Color( 1, 1, 1, 1 )
+2/region = Rect2( 8, 232, 456, 32 )
+2/tile_mode = 0
+2/occluder_offset = Vector2( 0, 0 )
+2/navigation_offset = Vector2( 0, 0 )
+2/shape_offset = Vector2( 0, 0 )
+2/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+2/shape_one_way = false
+2/shape_one_way_margin = 0.0
+2/shapes = [  ]
+2/z_index = 0
+
+[node name="FinalBattle" type="Node2D"]
+script = ExtResource( 15 )
+
+[node name="FinalBattleBg" type="Sprite" parent="."]
+position = Vector2( 1684, -23 )
+scale = Vector2( 1.2, 1.2 )
+z_index = -2
+texture = ExtResource( 1 )
+offset = Vector2( -975.833, 196.667 )
+
+[node name="TileMap" type="TileMap" parent="."]
+z_index = -1
+tile_set = SubResource( 1 )
+cell_size = Vector2( 8, 8 )
+format = 1
+tile_data = PoolIntArray( 3735522, 1, 0, 3735526, 1, 0, 3735530, 1, 0, 3735534, 1, 0, 3735538, 1, 0, 3735542, 1, 0, 3735546, 1, 0, 3735550, 1, 0, 3670018, 1, 0, 3670022, 1, 0, 3670026, 1, 0, 3670030, 1, 0, 3670034, 1, 0, 3670038, 1, 0, 3670042, 1, 0, 3670046, 1, 0, 3670050, 1, 0, 3670054, 1, 0, 3670058, 1, 0, 3670062, 1, 0, 3670066, 1, 0, 3670070, 1, 0, 3670074, 1, 0, 3670078, 1, 0, 3670082, 1, 0, 3670086, 1, 0, 3670090, 1, 0, 3670094, 1, 0, 3670098, 1, 0, 3670102, 1, 0, 3670106, 1, 0, 3670110, 1, 0, 3670114, 1, 0, 3670118, 1, 0, 3670122, 1, 0, 3670126, 1, 0, 3670130, 1, 0, 3670134, 1, 0, 3670138, 1, 0, 3670142, 1, 0, 3670146, 1, 0, 3670150, 1, 0, 3670154, 1, 0, 3670158, 1, 0, 3670162, 1, 0, 3670166, 1, 0, 3670170, 1, 0, 3932130, 2, 0, 3932147, 2, 0, 3866668, 2, 0, 3866725, 2, 0, 4194274, 2, 0, 4128795, 2, 0, 4128852, 2, 0, 4456418, 2, 0, 4390939, 2, 0, 4390996, 2, 0, 4718562, 2, 0, 4653083, 2, 0, 4653140, 2, 0, 4980706, 2, 0, 4915227, 2, 0, 4915284, 2, 0, 5242850, 2, 0, 5177371, 2, 0, 5177428, 2, 0 )
+
+[node name="shake" parent="." instance=ExtResource( 9 )]
+position = Vector2( 514, 297 )
+scale = Vector2( 3.4, 3.4 )
+current = true
+
+[node name="heroHealthBar" parent="." instance=ExtResource( 5 )]
+margin_left = 11.0
+margin_top = 32.0
+margin_right = 11.0
+margin_bottom = 32.0
+
+[node name="shield" type="Sprite" parent="heroHealthBar"]
+position = Vector2( 364.408, 21.3649 )
+scale = Vector2( 0.111963, 0.121883 )
+texture = ExtResource( 12 )
+
+[node name="Label" type="Label" parent="heroHealthBar/shield"]
+modulate = Color( 0, 0, 0, 1 )
+margin_left = -249.003
+margin_top = -312.414
+margin_right = -223.003
+margin_bottom = -281.414
+rect_scale = Vector2( 20, 20 )
+align = 1
+valign = 1
+
+[node name="enemyHealthBar" parent="." instance=ExtResource( 5 )]
+margin_left = 1014.0
+margin_top = 29.0
+margin_right = 1014.0
+margin_bottom = 29.0
+rect_scale = Vector2( -1, 1 )
+script = ExtResource( 2 )
+
+[node name="shield" type="Sprite" parent="enemyHealthBar"]
+position = Vector2( 364.408, 21.3649 )
+scale = Vector2( -0.112, 0.122 )
+texture = ExtResource( 12 )
+
+[node name="Label" type="Label" parent="enemyHealthBar/shield"]
+modulate = Color( 0, 0, 0, 1 )
+margin_left = -249.003
+margin_top = -312.414
+margin_right = -223.003
+margin_bottom = -281.414
+rect_scale = Vector2( 20, 20 )
+align = 1
+valign = 1
+
+[node name="TextureButton" type="TextureButton" parent="."]
+margin_left = 849.0
+margin_top = 436.0
+margin_right = 1027.0
+margin_bottom = 523.0
+texture_normal = ExtResource( 13 )
+texture_pressed = ExtResource( 14 )
+expand = true
+stretch_mode = 6
+
+[node name="wizard" parent="." instance=ExtResource( 6 )]
+position = Vector2( -115, 224 )
+scale = Vector2( 2, 2 )
+z_index = -1
+frame = 0
+
+[node name="hero" parent="." instance=ExtResource( 8 )]
+position = Vector2( 72, 240 )
+z_index = -1
+
+[node name="trilhaSonora" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 11 )
+volume_db = -0.81
+autoplay = true
+
+[node name="cardData" type="Label" parent="."]
+margin_left = 11.0
+margin_top = 94.0
+margin_right = 115.0
+margin_bottom = 243.0
+rect_scale = Vector2( 2, 2 )
+text = "Next cards:"
+script = ExtResource( 4 )
+
+[node name="enemyData" type="Label" parent="."]
+margin_left = 815.0
+margin_top = 85.0
+margin_right = 920.001
+margin_bottom = 150.0
+rect_scale = Vector2( 2, 2 )
+text = "Enemy Attacks:"
+script = ExtResource( 10 )
+
+[node name="gameOver" parent="." instance=ExtResource( 7 )]
+visible = false
+position = Vector2( 515, 294 )
+
+[node name="deployment" parent="." instance=ExtResource( 3 )]
+percent_visible = 1.0
+
+[connection signal="pressed" from="TextureButton" to="wizard" method="_on_TextureButton_pressed"]

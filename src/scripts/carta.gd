@@ -26,7 +26,7 @@ var dataEnemy
 
 func _ready():
 	centerPosition = Vector2(512,288)#Vector2(get_viewport().size.x/2, get_viewport().size.y/2)
-
+	
 func _physics_process(delta):
 	moveCard()
 	extinguishOn(delta)
@@ -82,33 +82,49 @@ func battleAction():
 		"business":
 			if damage != 0:
 				GlobalBattle.heroDamage = damage * GlobalBattle.heroMultiply + GlobalBattle.heroDamagePlus + GlobalBattle.heroPlus
+				
+				if GlobalBattle.heroUserKpi: GlobalBattle.heroDamage *= 2
+				
 				get_parent().get_node("hero").moveFoward = true
 				GlobalBattle.heroDamagePlus = 0
 			else:#shield
-				get_parent().get_node("heroHealthBar").increaseShield(shield*GlobalBattle.heroMultiply + GlobalBattle.heroPlus)
+				shield *= GlobalBattle.heroMultiply
+				shield += GlobalBattle.heroPlus
+				
+				if GlobalBattle.heroUserKpi: shield*= 2
+				
+				get_parent().get_node("heroHealthBar").increaseShield(shield)
+				GlobalBattle.cantClick = false
 			GlobalBattle.heroMultiply = 1
 			GlobalBattle.heroPlus = 0
 		"vision":
 			if heal != 0:
+				if GlobalBattle.heroUserKpi: 
+					GlobalBattle.camera.shake(0.5,5)
+					get_parent().get_node("heroHealthBar").decreaseUserKpi()
+					heal *= 2
 				get_parent().get_node("hero").handsUp()
 				get_parent().get_node("heroHealthBar").increaseLife(heal * GlobalBattle.heroMultiply + GlobalBattle.heroPlus)
 			else:
 				GlobalBattle.heroDamagePlus = plus
 			GlobalBattle.heroMultiply = 1
+			GlobalBattle.cantClick = false
 		"data":
+			get_parent().get_node("hero").handsUp()
 			if dataCard != 0:
-				get_parent().get_node("hero").handsUp()
 				get_parent().get_node("cardData").showNextCards(5*GlobalBattle.heroMultiply)
 			else:#dataEnemy
-				pass
+				get_parent().get_node("enemyData").showNextEnemyAttack(5*GlobalBattle.heroMultiply)
 			
 			GlobalBattle.heroMultiply = 1
+			GlobalBattle.cantClick = false
 		"quality":
 			get_parent().get_node("hero").handsUp()
 			if multiply != 0:
 				GlobalBattle.heroMultiply = multiply
 			else:
 				GlobalBattle.heroPlus = plus
+			GlobalBattle.cantClick = false
 
 
 

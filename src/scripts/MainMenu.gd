@@ -1,8 +1,9 @@
 extends Node2D
+var sceneToGo = "res://scenes/MotherLand.tscn"
 
 func _on_play_button_pressed(): #this fuction is to start the game
 	$ButtonSound.play()
-	get_tree().change_scene("res://scenes/cidade1.tscn")
+	TransitionScreen.FadeInto(sceneToGo)
 	
 func _on_config_button_pressed():#leva para o menu do jogo, onde é possível fazer ajustes
 	$ButtonSound.play()

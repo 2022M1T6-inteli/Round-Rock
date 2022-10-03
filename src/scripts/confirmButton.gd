@@ -29,5 +29,5 @@ func _on_confirmButton_pressed():
 		GlobalBattle.cantClick = true
 		GlobalBattle.showNextCards += 1
 	else:
-		print("dont have enough mana")
+		get_parent().get_parent().get_node("deployment").noMana()
 	

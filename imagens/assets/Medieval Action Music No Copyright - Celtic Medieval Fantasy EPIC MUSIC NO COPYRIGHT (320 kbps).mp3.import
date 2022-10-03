@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Medieval Action Music No Copyright - Celtic Medieval Fantasy EPIC MUSIC NO COPYRIGHT (320 kbps).mp3-6bd70886a018ed7b83e25577628d09c6.mp3str"
+
+[deps]
+
+source_file="res://assets/Medieval Action Music No Copyright - Celtic Medieval Fantasy EPIC MUSIC NO COPYRIGHT (320 kbps).mp3"
+dest_files=[ "res://.import/Medieval Action Music No Copyright - Celtic Medieval Fantasy EPIC MUSIC NO COPYRIGHT (320 kbps).mp3-6bd70886a018ed7b83e25577628d09c6.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

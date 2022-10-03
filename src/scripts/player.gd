@@ -2,14 +2,29 @@ extends KinematicBody2D
 
 export(PackedScene) var target_dialogue
 
-const TARGET_FPS = 80
-const ACCELERATION = 35
-const MAX_SPEED = 650
-const FRICTION = 50
-const AIR_RESISTANCE = 1
-const GRAVITY = 27
-const JUMP_FORCE = 800
 var dirSprite = 1
+
+func _ready():
+	
+
+#	Global.TARGET_FPS = 80
+#	ACCELERATION = 80
+#	MAX_SPEED = 1000
+#	FRICTION = 50
+#	AIR_RESISTANCE = 1
+#	GRAVITY = 60
+#	JUMP_FORCE = 2100
+#	dirSprite = 1
+	
+#	export var TARGET_FPS = 80
+#	export var ACCELERATION = 80
+#	export var MAX_SPEED = 1000
+#	export var FRICTION = 50
+#	export var AIR_RESISTANCE = 1
+#	export var GRAVITY = 60
+#	export var JUMP_FORCE = 2100
+#	var dirSprite = 1
+	pass
 
 var motion = Vector2.ZERO
 
@@ -21,8 +36,8 @@ func _physics_process(delta):
 	
 	if x_input != 0:
 		animationPlayer.play("Run")
-		motion.x += x_input * ACCELERATION * delta * TARGET_FPS
-		motion.x = clamp(motion.x, -MAX_SPEED, MAX_SPEED)
+		motion.x += x_input * Global.ACCELERATION * delta * Global.TARGET_FPS
+		motion.x = clamp(motion.x, -Global.MAX_SPEED, Global.MAX_SPEED)
 		if $Timer.time_left <= 0:
 			$AudioStreamPlayer.pitch_scale = rand_range(0.6,0.9)
 			$AudioStreamPlayer.play()
@@ -43,27 +58,28 @@ func _physics_process(delta):
 			$AudioStreamPlayer.stop()
 			$Timer.stop()
 	
-	motion.y += GRAVITY * delta * TARGET_FPS
+	motion.y += Global.GRAVITY * delta * Global.TARGET_FPS
 	
 	if is_on_floor():
 		if x_input == 0:
-			motion.x = lerp(motion.x, 0, FRICTION * delta)
+			motion.x = lerp(motion.x, 0, Global.FRICTION * delta)
 			
 		if Input.is_action_just_pressed("ui_up"):
 			animationPlayer.play("Jump")
-			motion.y = -JUMP_FORCE
+			motion.y = -Global.JUMP_FORCE
+			$AudioStreamPlayer.stop()
 			
 	else:
 		animationPlayer.play("Jump")
 		$AudioStreamPlayer.stop()
 		
-		if Input.is_action_just_released("ui_up") and motion.y < -JUMP_FORCE/2:
-			motion.y = -JUMP_FORCE/2
+		if Input.is_action_just_released("ui_up") and motion.y < -Global.JUMP_FORCE/2:
+			motion.y = -Global.JUMP_FORCE/2
 			animationPlayer.play("Jump")
 			
 		
-		if x_input == 0:
-			motion.x = lerp(motion.x, 0, AIR_RESISTANCE * delta)
+		if motion.y > 0:
+			motion.x = lerp(motion.x, 0, Global.AIR_RESISTANCE * delta)
 			animationPlayer.play("Fall")
 		
 	motion = move_and_slide(motion, Vector2.UP)

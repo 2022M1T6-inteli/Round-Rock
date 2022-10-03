@@ -1,0 +1,48 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://assets/FortOfIllusion/castelinho2d.png" type="Texture" id=1]
+[ext_resource path="res://scenes/player.tscn" type="PackedScene" id=2]
+[ext_resource path="res://scenes/FortOfIllusionScene.gd" type="Script" id=3]
+[ext_resource path="res://scenes/NPC.tscn" type="PackedScene" id=4]
+[ext_resource path="res://scenes/Portal.tscn" type="PackedScene" id=5]
+[ext_resource path="res://FortRoof.png" type="Texture" id=6]
+
+[node name="FortOfIllusion" type="Sprite"]
+position = Vector2( 3064, 189 )
+texture = ExtResource( 1 )
+script = ExtResource( 3 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+visible = false
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D"]
+polygon = PoolVector2Array( -2219, 291, -2221, 362, -2166, 363, -1874, 367, -1876, 222, -2156, 215, -2155, 265, -2203, 262, -2203, 292 )
+
+[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="StaticBody2D"]
+polygon = PoolVector2Array( -3060, 359, -3060, 509, -2438, 510, -2219, 509, -2218, 358, -2446, 359 )
+
+[node name="CollisionPolygon2D3" type="CollisionPolygon2D" parent="StaticBody2D"]
+polygon = PoolVector2Array( -3060, 61, -3060, 82, -2309, 88, -2311, 64 )
+one_way_collision = true
+
+[node name="CollisionPolygon2D4" type="CollisionPolygon2D" parent="StaticBody2D"]
+polygon = PoolVector2Array( -1720, 359, -1721, 507, 3066, 508, 3066, 359 )
+
+[node name="CollisionPolygon2D5" type="CollisionPolygon2D" parent="StaticBody2D"]
+polygon = PoolVector2Array( -1532, 59, -1530, 88, 3065, 87, 3065, 64 )
+one_way_collision = true
+
+[node name="Player" parent="." instance=ExtResource( 2 )]
+position = Vector2( -2927, 214 )
+
+[node name="Node2D" parent="." instance=ExtResource( 4 )]
+position = Vector2( -1382, 286 )
+
+[node name="Portal" parent="." instance=ExtResource( 5 )]
+position = Vector2( -1089, 288 )
+sceneToGo = "res://scenes/FortBattle.tscn"
+
+[node name="FortRoof" type="Sprite" parent="."]
+position = Vector2( -2307, 334 )
+scale = Vector2( 3, 3 )
+texture = ExtResource( 6 )

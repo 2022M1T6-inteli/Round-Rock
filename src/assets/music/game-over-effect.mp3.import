@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/game-over-effect.mp3-faf73a5af87ed277d41ac21ca32e2fc4.mp3str"
+
+[deps]
+
+source_file="res://assets/music/game-over-effect.mp3"
+dest_files=[ "res://.import/game-over-effect.mp3-faf73a5af87ed277d41ac21ca32e2fc4.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

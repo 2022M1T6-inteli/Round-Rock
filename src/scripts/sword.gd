@@ -9,6 +9,8 @@ func _ready():
 
 func _process(delta):
 	position.x -= speed * delta
-	if position.x < 150:
+
+
+func _on_Espada_area_entered(area):
 		queue_free() 
 		GlobalBattle.cantClick = false

@@ -1,0 +1,20 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://DeckBuilder/Scripts/DeckDisplayLabel.gd" type="Script" id=1]
+
+[node name="DeckDisplayScene" type="Node2D"]
+
+[node name="ColorRect" type="ColorRect" parent="."]
+margin_left = 864.0
+margin_top = 33.0
+margin_right = 1064.0
+margin_bottom = 562.0
+color = Color( 0, 0, 0, 0.392157 )
+
+[node name="DeckDisplayLabel" type="Label" parent="ColorRect"]
+margin_top = 20.0
+margin_right = 202.0
+margin_bottom = 253.0
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+align = 1
+script = ExtResource( 1 )

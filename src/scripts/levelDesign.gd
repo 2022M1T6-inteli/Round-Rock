@@ -2,6 +2,9 @@ extends Node2D
 
 onready var preCarta = preload("res://scenes/carta.tscn")
 
+var noise = OpenSimplexNoise.new()
+
+
 var cartas = GlobalCards.cardDic
 
 var deck = []
@@ -13,7 +16,6 @@ func _ready():
 #start the enemys turn
 func _physics_process(delta):
 	drawCards()
-
 #this func add the cards on the screen, inside the scene
 func showDeck(start,end):
 	for i in range(start, end):
@@ -22,18 +24,23 @@ func showDeck(start,end):
 
 
 func drawCards():
-	if GlobalCards.drawCards:
+	if GlobalCards.drawCards and GlobalCards.nextCard < len(deck):
 		get_node("cardData").decreaseNextCards()
-		var positioCardIndex = 0
+		get_node("heroHealthBar").userKpi()
+		if GlobalCards.untilCard >= len(deck):
+			GlobalCards.untilCard = len(deck)
+		var positionCardIndex = 0
 		for i in range(GlobalCards.nextCard, GlobalCards.untilCard):
-			deck[i].position = GlobalCards.positionCard[positioCardIndex]
-			positioCardIndex += 1
+			deck[i].position = GlobalCards.positionCard[positionCardIndex]
+			positionCardIndex += 1
 			add_child(deck[i])
 			
 		GlobalCards.nextCard = GlobalCards.untilCard
 		GlobalCards.drawCards = false
 		GlobalCards.positionCard = []
 		GlobalBattle.showNextCards = 0
+	elif GlobalCards.nextCard >= len(deck):
+		GlobalCards.noMoreCards = true
 	
 #the func that instance new cards inside a list called Deck
 func instanceCard():

@@ -1,0 +1,62 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://DeckBuilder/Assets/Buttons/back button.png" type="Texture" id=1]
+[ext_resource path="res://DeckBuilder/Assets/Scrolls/scroll.png" type="Texture" id=2]
+[ext_resource path="res://DeckBuilder/Scripts/InfoReturnButton.gd" type="Script" id=3]
+[ext_resource path="res://DeckBuilder/Scripts/DimensionText.gd" type="Script" id=4]
+[ext_resource path="res://DeckBuilder/Scripts/Title.gd" type="Script" id=5]
+
+[node name="Info" type="Node2D"]
+
+[node name="Panel" type="Panel" parent="."]
+modulate = Color( 1, 1, 1, 0.784314 )
+margin_right = 1022.0
+margin_bottom = 596.0
+
+[node name="UserKPIs" type="TextureButton" parent="."]
+margin_left = 403.0
+margin_top = 42.0
+margin_right = 600.0
+margin_bottom = 115.0
+texture_normal = ExtResource( 2 )
+expand = true
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="DimensionText" type="Label" parent="UserKPIs"]
+margin_left = -321.0
+margin_top = 103.0
+margin_right = 546.0
+margin_bottom = 630.0
+text = "Deployment KPIs
+O(A) jogador(a) deve garantir que as implementações sejam feitas continuamente. As cartas de Implementação lhe dão o recurso de implementar outras cartas. No Modelo de Produto do mundo real, os KPIs de Implementação garantem que todos tenham acesso ao estágio atual do produto.
+Como parte da jornada de transformação o Modelo de Produto é dividido em quatro níveis cada vez mais maduros:
+* A equipe está no nível 1 quando o código-fonte do produto não está localizado no GitLab;
+* Se encontra no nível 2 quando o código-fonte do produto está localizado no GitLab e a pontuação do Release Automation conforme DevOps Assessment Dashboard é < 100%. O produto está de acordo com o Painel de Avaliação DevOps. E a média de Implementação/Mês que os usuários recebem > 0;
+* Está no nível 3 quando o código-fonte do produto está localizado no Gitlab e a pontuação do Release Automation conforme DevOps Assessment Dashboard é 100%. O produto está de acordo com o Painel de Avaliação Devops. E a média de Implantação/Semana que os usuários recebem > 0;
+* Atinge o nível 4 quando o código-fonte do produto está localizado no GitLab e a pontuação do Release Automation conforme DevOps Assessment Dashboard é 100%. Além disso, o produto foi aprovado para uma mudança padrão no ServiceNow. O produto está de acordo com o Painel de Avaliação Devops. E a média de Implementação/Dia que os usuários recebem > 0."
+autowrap = true
+script = ExtResource( 4 )
+
+[node name="Title" type="Label" parent="."]
+margin_left = 420.0
+margin_top = 49.0
+margin_right = 584.0
+margin_bottom = 109.0
+rect_pivot_offset = Vector2( 82, 120 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "User KPIs"
+align = 1
+valign = 1
+script = ExtResource( 5 )
+
+[node name="InfoReturnButton" type="TextureButton" parent="."]
+margin_left = 17.0
+margin_top = 17.0
+margin_right = 57.0
+margin_bottom = 57.0
+texture_normal = ExtResource( 1 )
+expand = true
+stretch_mode = 4
+script = ExtResource( 3 )
