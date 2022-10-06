@@ -20,7 +20,7 @@
 [ext_resource path="res://assets/buttonEndTurn.png" type="Texture" id=18]
 [ext_resource path="res://scenes/sprout.tscn" type="PackedScene" id=19]
 [ext_resource path="res://scenes/hero.tscn" type="PackedScene" id=20]
-[ext_resource path="res://scenes/GameOver.tscn" type="PackedScene" id=21]
+[ext_resource path="res://scenes/gameOver.tscn" type="PackedScene" id=21]
 [ext_resource path="res://scenes/deployment.tscn" type="PackedScene" id=22]
 [ext_resource path="res://scripts/enemyData.gd" type="Script" id=23]
 [ext_resource path="res://scripts/cardData.gd" type="Script" id=24]
@@ -916,10 +916,6 @@ rect_scale = Vector2( 2, 2 )
 text = "Enemy Attacks:"
 script = ExtResource( 23 )
 
-[node name="gameOver" parent="." instance=ExtResource( 21 )]
-visible = false
-position = Vector2( 515, 294 )
-
 [node name="deployment" parent="." instance=ExtResource( 22 )]
 margin_left = 470.0
 margin_top = 41.0
@@ -933,5 +929,7 @@ margin_right = 123.0
 margin_bottom = 250.0
 
 [node name="CanvasLayer" parent="." instance=ExtResource( 27 )]
+
+[node name="gameOver" parent="." instance=ExtResource( 21 )]
 
 [connection signal="pressed" from="TextureButton" to="sprout" method="_on_TextureButton_pressed"]

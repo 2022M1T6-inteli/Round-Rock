@@ -5,7 +5,7 @@
 [ext_resource path="res://scripts/enemyHealthBar.gd" type="Script" id=3]
 [ext_resource path="res://scenes/ghostEnemy.tscn" type="PackedScene" id=4]
 [ext_resource path="res://scenes/shake.tscn" type="PackedScene" id=5]
-[ext_resource path="res://scenes/GameOver.tscn" type="PackedScene" id=6]
+[ext_resource path="res://scenes/gameOver.tscn" type="PackedScene" id=6]
 [ext_resource path="res://scenes/healthBar.tscn" type="PackedScene" id=7]
 [ext_resource path="res://scenes/hero.tscn" type="PackedScene" id=8]
 [ext_resource path="res://scripts/cardData.gd" type="Script" id=9]
@@ -107,6 +107,7 @@ self_modulate = Color( 1, 1, 1, 0.431373 )
 position = Vector2( 818, 232 )
 scale = Vector2( 3, 3 )
 z_index = -1
+frame = 4
 
 [node name="hero" parent="." instance=ExtResource( 8 )]
 position = Vector2( 72, 240 )
@@ -138,10 +139,6 @@ rect_scale = Vector2( 2, 2 )
 text = "Enemy Attacks:"
 script = ExtResource( 2 )
 
-[node name="gameOver" parent="." instance=ExtResource( 6 )]
-visible = false
-position = Vector2( 515, 294 )
-
 [node name="deployment" parent="." instance=ExtResource( 10 )]
 
 [node name="dialogueTutorial" parent="." instance=ExtResource( 16 )]
@@ -152,6 +149,8 @@ margin_bottom = 238.0
 script = ExtResource( 17 )
 
 [node name="CanvasLayer" parent="." instance=ExtResource( 18 )]
+
+[node name="gameOver" parent="." instance=ExtResource( 6 )]
 
 [connection signal="pressed" from="TextureButton" to="ghostEnemy" method="_on_TextureButton_pressed"]
 [connection signal="pressed" from="TextureButton" to="dialogueTutorial" method="_on_TextureButton_pressed"]

@@ -680,7 +680,7 @@ position = Vector2( 347.5, 172.5 )
 scale = Vector2( 2, 2 )
 z_index = -1
 frames = SubResource( 21 )
-frame = 12
+frame = 4
 playing = true
 
 [node name="GoToDarkLightForest" type="TextureButton" parent="."]
@@ -796,7 +796,7 @@ scale = Vector2( 2, 2 )
 z_index = -1
 frames = SubResource( 92 )
 animation = "New Anim"
-frame = 38
+frame = 63
 playing = true
 
 [node name="GoToFortOfIllusion" type="TextureButton" parent="."]
@@ -824,7 +824,7 @@ position = Vector2( 390, 230 )
 scale = Vector2( 2.6, 2.6 )
 z_index = -1
 frames = SubResource( 43 )
-frame = 3
+frame = 7
 playing = true
 
 [node name="GoToHallsOfStone" type="TextureButton" parent="."]
@@ -853,7 +853,7 @@ scale = Vector2( 2, 2 )
 z_index = -1
 z_as_relative = false
 frames = SubResource( 60 )
-frame = 5
+frame = 9
 playing = true
 
 [node name="GoToHomeLand" type="TextureButton" parent="."]

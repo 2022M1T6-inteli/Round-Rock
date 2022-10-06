@@ -20,7 +20,7 @@
 [ext_resource path="res://assets/Catacombs/CatacombsBG1.png" type="Texture" id=18]
 [ext_resource path="res://assets/Catacombs/CatacombsBG4.png" type="Texture" id=19]
 [ext_resource path="res://scenes/shake.tscn" type="PackedScene" id=20]
-[ext_resource path="res://scenes/GameOver.tscn" type="PackedScene" id=21]
+[ext_resource path="res://scenes/gameOver.tscn" type="PackedScene" id=21]
 [ext_resource path="res://scenes/hero.tscn" type="PackedScene" id=22]
 [ext_resource path="res://scenes/initCards.gd" type="Script" id=23]
 [ext_resource path="res://scenes/dialogueBattle.tscn" type="PackedScene" id=24]
@@ -1200,7 +1200,7 @@ position = Vector2( 853, 246 )
 scale = Vector2( 3, 3 )
 z_index = -1
 animation = "idle"
-frame = 5
+frame = 0
 
 [node name="hero" parent="." instance=ExtResource( 22 )]
 position = Vector2( 72, 240 )
@@ -1232,10 +1232,6 @@ rect_scale = Vector2( 2, 2 )
 text = "Enemy Attacks:"
 script = ExtResource( 1 )
 
-[node name="gameOver" parent="." instance=ExtResource( 21 )]
-visible = false
-position = Vector2( 515, 294 )
-
 [node name="deployment" parent="." instance=ExtResource( 3 )]
 margin_top = 34.0
 margin_bottom = 54.0
@@ -1247,5 +1243,7 @@ margin_left = 101.0
 margin_top = 254.0
 margin_right = 101.0
 margin_bottom = 254.0
+
+[node name="gameOver" parent="." instance=ExtResource( 21 )]
 
 [connection signal="pressed" from="TextureButton" to="gelatto" method="_on_TextureButton_pressed"]

@@ -76,7 +76,7 @@ func realDeath():
 		get_parent().get_node("gameOver").gameOver()
 		yield(get_tree().create_timer(1.5), "timeout")
 		modulate.a = lerp(modulate.a, 0, 0.01)
-		TransitionScreen.FadeInto(sceneToGo)
+		TransitionScreen.FadeInto(sceneToDie)
 		if floor(modulate.a8) == 0:
 			visible = false
 

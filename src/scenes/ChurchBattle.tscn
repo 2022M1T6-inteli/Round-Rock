@@ -222,7 +222,7 @@ stretch_mode = 6
 [node name="Bringer" parent="." instance=ExtResource( 15 )]
 position = Vector2( 901, 243 )
 scale = Vector2( 3, 3 )
-frame = 4
+frame = 5
 
 [node name="hero" parent="." instance=ExtResource( 10 )]
 position = Vector2( 72, 240 )
@@ -262,9 +262,8 @@ margin_top = 249.0
 margin_right = 91.0
 margin_bottom = 249.0
 
-[node name="gameOver" parent="." instance=ExtResource( 13 )]
-visible = false
-
 [node name="CanvasLayer" parent="." instance=ExtResource( 18 )]
+
+[node name="gameOver" parent="." instance=ExtResource( 13 )]
 
 [connection signal="pressed" from="TextureButton" to="Bringer" method="_on_TextureButton_pressed"]

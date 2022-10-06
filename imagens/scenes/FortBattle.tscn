@@ -9,7 +9,7 @@
 [ext_resource path="res://scenes/healthBar.tscn" type="PackedScene" id=7]
 [ext_resource path="res://scenes/Archer.tscn" type="PackedScene" id=8]
 [ext_resource path="res://scenes/shake.tscn" type="PackedScene" id=9]
-[ext_resource path="res://scenes/GameOver.tscn" type="PackedScene" id=10]
+[ext_resource path="res://scenes/gameOver.tscn" type="PackedScene" id=10]
 [ext_resource path="res://scripts/enemyData.gd" type="Script" id=11]
 [ext_resource path="res://assets/sounds/ockaie_temple.ogg" type="AudioStream" id=12]
 [ext_resource path="res://assets/shield/shield.png" type="Texture" id=13]
@@ -175,7 +175,7 @@ stretch_mode = 6
 [node name="Archer" parent="." instance=ExtResource( 8 )]
 position = Vector2( 188, -844 )
 scale = Vector2( 3.0669, 3.13736 )
-frame = 5
+frame = 3
 
 [node name="hero" parent="." instance=ExtResource( 6 )]
 position = Vector2( 73, 247 )
@@ -207,10 +207,6 @@ rect_scale = Vector2( 2, 2 )
 text = "Enemy Attacks:"
 script = ExtResource( 11 )
 
-[node name="gameOver" parent="." instance=ExtResource( 10 )]
-visible = false
-position = Vector2( 515, 294 )
-
 [node name="deployment" parent="." instance=ExtResource( 4 )]
 
 [node name="Control" parent="." instance=ExtResource( 18 )]
@@ -220,5 +216,7 @@ margin_right = 112.0
 margin_bottom = 264.0
 
 [node name="CanvasLayer" parent="." instance=ExtResource( 19 )]
+
+[node name="gameOver" parent="." instance=ExtResource( 10 )]
 
 [connection signal="pressed" from="TextureButton" to="Archer" method="_on_TextureButton_pressed"]

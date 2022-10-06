@@ -824,6 +824,7 @@ z_index = -1
 sceneToGo = "res://scenes/DarkLightBattle.tscn"
 
 [node name="Control" parent="." instance=ExtResource( 14 )]
+visible = false
 margin_left = 569.512
 margin_top = 328.409
 margin_right = 569.512
@@ -839,6 +840,7 @@ scale = Vector2( 1.59867, -2.16767 )
 position = Vector2( -6.32371, 8.14861 )
 scale = Vector2( 0.60196, 0.601176 )
 frames = SubResource( 34 )
+frame = 2
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]

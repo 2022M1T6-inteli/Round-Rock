@@ -69,7 +69,7 @@ func _on_GoToHallsOfStone_mouse_entered():
 
 func _on_GoToHomeLand_pressed():
 	$ButtonSound.play()
-	TransitionScreen.FadeInto("res://scenes/Homeland.tscn")
+	TransitionScreen.FadeInto("res://scenes/HomeLand.tscn")
 	pass # Replace with function body.
 
 func _on_GoToHomeLand_mouse_entered():

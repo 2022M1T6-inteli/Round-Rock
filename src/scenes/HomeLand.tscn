@@ -180,7 +180,7 @@ texture = ExtResource( 4 )
 position = Vector2( 1954, -353.5 )
 scale = Vector2( 0.1, 0.1 )
 z_index = 1
-frame = 61
+frame = 47
 
 [node name="Area2D" type="Area2D" parent="."]
 position = Vector2( 8731, 119.5 )
@@ -190,6 +190,7 @@ scale = Vector2( 0.8, 4.95169 )
 position = Vector2( -208.75, -10.9054 )
 scale = Vector2( -4.21278, 1.10154 )
 frames = SubResource( 34 )
+frame = 3
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
@@ -197,6 +198,7 @@ position = Vector2( -241.875, -10.6407 )
 shape = SubResource( 35 )
 
 [node name="Control" parent="Area2D" instance=ExtResource( 11 )]
+visible = false
 margin_left = -1775.0
 margin_top = -187.815
 margin_right = -1775.0
