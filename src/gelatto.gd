@@ -4,8 +4,8 @@ var pre_iceBall = preload("res://scenes/iceBall.tscn")#this function preloads th
 onready var originalPosition = position #sets the original position to the position the enemy starts in the scene
 var dataAttack = [
 	{"nome":"attack", "valor":5},
-	{"nome":"melee", "valor":15},
-	{"nome":"shield", "valor":8},
+	{"nome":"melee", "valor":30},
+	{"nome":"shield", "valor":15},
 ]#this is a list of dictionaries from which animations and damage are taken, this list is randomized on the line 34
 var move = false #motion variable
 var attack = false #attack variable
@@ -27,12 +27,14 @@ func _ready():
 	listAttack()
 	GlobalBattle.reset()
 	GlobalBattle.enemyName = "gelatto"
-	
+
+#generate list of attacks
 func listAttack():
 	for i in range(40):
 		animacao = randi() % dataAttack.size()
 		listAttack.append(dataAttack[animacao])
-	
+
+#iniciate the attack
 func dataAttack():
 	if action:
 		animation = listAttack[0].nome
@@ -49,6 +51,7 @@ func dataAttack():
 		GlobalCards.drawCards = true
 		listAttack.pop_front()
 		
+#manage attack
 func goAttack():
 	if moveFoward:
 		position.x -= 2.5
@@ -56,6 +59,7 @@ func goAttack():
 	elif attack:
 		attack()
 		
+#When turn is changed
 func _on_TextureButton_pressed():
 	if not GlobalBattle.cantClick:
 		"""not GlobalCards.waitCardExtinguish and"""
@@ -65,6 +69,7 @@ func _on_TextureButton_pressed():
 		dataAttack()
 		get_parent().get_node("enemyData").decreaseNextEnemyAttack()
 	
+#manage actions
 func actions():
 	if animation == "melee" and not attack:
 		moveFoward = true
@@ -84,14 +89,15 @@ func actions():
 				visible = false
 				queue_free()
 				
+#animations
 func attack():
 	animation = "attack1"
 func run():
-	animation = "run"
-	
+	animation = "run"	
 func melee():
 	animation = "melee"
 	
+#move back to original position
 func moveBack():
 	if not death:
 		if moveBack:
@@ -109,18 +115,22 @@ func increaseLife(value):
 	get_parent().get_node("enemyHealthBar").increaseLife(value)
 func decreaseLife():
 	get_parent().get_node("enemyHealthBar").decreaseLife(GlobalBattle.heroDamage)
+	
+#instance an iceBall
 func iceBall():
 	yield(get_tree().create_timer(0.5), "timeout")
 	var iceBall = pre_iceBall.instance()
 	get_parent().add_child(iceBall)
 	#$arrow.play()
-	
+
+#collision for attack management
 func _on_hitBox_area_entered(area):
 	if position != originalPosition:
 		moveFoward = false
 		attack = true
 	pass # Replace with function body.
 	
+#colligion for recieve damage
 func _on_hurtBox_area_entered(area):
 	if position == originalPosition:
 		yield(get_tree().create_timer(0.5), "timeout")
@@ -132,6 +142,8 @@ func _on_hurtBox_area_entered(area):
 			get_parent().get_node("heroHealthBar").decreaseUserKpi()
 		#$damage.play()
 		decreaseLife()
+
+#change enemy state when animation is finished
 func _on_gelatto_animation_finished():
 	if not death and not moveBack and not moveFoward:
 		if animation == "attack1":

@@ -12,6 +12,9 @@ func _ready():
 	setVisibleCards(GlobalDeckBuilder.dimension)
 	showBanner()
 	showCards(visibleCards)
+	for child in get_children():
+		if child.name == "carta":
+			print(child.position)
 
 
 func card(cardInfo):
@@ -21,9 +24,14 @@ func card(cardInfo):
 	if x >= 800:
 		x = 280
 		y += 140
-	carta.get_node("background").texture = load("res://DeckBuilder/assets/cartas/background/"+cardInfo["type"]+"Background.png")
-	carta.get_node("image").texture = load("res://DeckBuilder/assets/cartas/images/"+cardInfo["testImage"]+".png")
-	carta.get_node("custo").texture = load("res://DeckBuilder/assets/cartas/custo/custo"+str(cardInfo["cost"])+".png")
+	carta.scale = Vector2(0.5,0.5)
+	carta.get_node("background").texture = load("res://assets/cartas/background/"+cardInfo["type"]+"Background.png")
+	carta.get_node("image").texture = load("res://DeckBuilder/Assets/newCardBackgrounds/"+cardInfo["name"]+".png")
+#	var sizeto = Vector2(150,135)
+#	var size = carta.get_node("image").texture.get_size()
+#	var scale_factor = sizeto/size
+#	carta.get_node("image").scale = scale_factor
+	carta.get_node("custo").texture = load("res://DeckBuilder/assets/cartas/custoDeckBuilder/custo"+str(cardInfo["cost"])+".png")
 	carta.get_node("name").text = cardInfo["name"]
 	carta.get_node("description").text = cardInfo["description"]
 	carta.cost = cardInfo["cost"]
@@ -38,12 +46,11 @@ func card(cardInfo):
 			carta.heal = cardInfo["heal"]
 			carta.plus = cardInfo["plus"]
 		"data":
-			carta.data = cardInfo["data"]
-			carta.scry = cardInfo["scry"]
+			carta.dataCard = cardInfo["dataCards"]
+			carta.dataEnemy = cardInfo["dataEnemy"]
 		"quality":
 			carta.plus = cardInfo["plus"]
 			carta.multiply = cardInfo["multiply"]
-	
 	return carta
 	
 
@@ -68,3 +75,4 @@ func showBanner():
 func showCards(cards):
 	for i in range(len(visibleCards)):
 		add_child(visibleCards[i])
+		pass

@@ -4,9 +4,9 @@ var pre_laser = preload("res://scenes/laser.tscn")#this function preloads the la
 onready var originalPosition = position #sets the original position to the position the enemy starts in the scene
 var dataAttack = [
 	{"nome":"attack", "valor":10},
-	{"nome":"melee", "valor":10},
-	{"nome":"shield", "valor":5},
-	{"nome":"lasercast", "valor":20}
+	{"nome":"melee", "valor":15},
+	{"nome":"shield", "valor":15},
+	{"nome":"lasercast", "valor":18}
 	
 ]#this is a list of dictionaries from which animations and damage are taken, this list is randomized on the line 34
 var move = false #motion variable

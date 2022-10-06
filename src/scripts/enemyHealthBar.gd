@@ -7,9 +7,12 @@ func _physics_process(delta):
 	
 
 func _ready():
-	$HealthBar.value = 20
+	$HealthBar.value = 100
 	$shield.modulate.a = 0
+	if get_tree().current_scene.name == "MotherLandBattle":
+		$HealthBar.value = 20
 
+#decrease health and shield
 func decreaseLife(value):
 	if GlobalBattle.enemyShield > 0:
 		if GlobalBattle.enemyShield - value < 0:

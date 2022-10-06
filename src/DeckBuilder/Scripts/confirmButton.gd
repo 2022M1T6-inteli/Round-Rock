@@ -27,10 +27,18 @@ func _on_confirmButton_pressed():
 	for card in GlobalDeckBuilder.deckDictionary:
 		if card.name == get_parent().get_node("name").text:
 			count += 1
-	if count < 5 and len(GlobalDeckBuilder.deck) < 60:
-		GlobalDeckBuilder.deck.append(get_parent())
-		for card in GlobalDeckBuilder.ownedCards:
-			if card.name == get_parent().get_node("name").text:
-				GlobalDeckBuilder.deckDictionary.append(card)
-				break
+	if not get_parent().type == "deployment":
+		if count < 5 and len(GlobalDeckBuilder.deckDictionary) < 60:
+			GlobalDeckBuilder.deck.append(get_parent())
+			for card in GlobalDeckBuilder.ownedCards:
+				if card.name == get_parent().get_node("name").text:
+					GlobalDeckBuilder.deckDictionary.append(card)
+					break
+	else:
+		if count < 30 and len(GlobalDeckBuilder.deckDictionary) < 60:
+			GlobalDeckBuilder.deck.append(get_parent())
+			for card in GlobalDeckBuilder.ownedCards:
+				if card.name == get_parent().get_node("name").text:
+					GlobalDeckBuilder.deckDictionary.append(card)
+					break
 	

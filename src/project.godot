@@ -10,7 +10,7 @@ config_version=4
 
 [application]
 
-config/name="inimigo"
+config/name="Atualizado"
 run/main_scene="res://scenes/roundRockIntro.tscn"
 config/icon="res://icon.png"
 
@@ -21,6 +21,7 @@ GlobalBattle="*res://scripts/GlobalBattle.gd"
 Global="*res://scripts/Global.gd"
 TransitionScreen="*res://scenes/transitionScreen copy.tscn"
 GlobalDeckBuilder="*res://DeckBuilder/Scripts/GlobalDeckBuilder.gd"
+GlobalTexts="*res://scripts/GlobalTexts.gd"
 
 [display]
 
@@ -38,6 +39,25 @@ dimensions={
 "deadzone": 0.5,
 "events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":0,"physical_scancode":67,"unicode":0,"echo":false,"script":null)
  ]
+}
+
+[locale]
+
+test="en"
+locale_filter=[ 1, [ "en", "pt_BR" ] ]
+translation_remaps={
+"res://Levels.png": PoolStringArray( "res://Niveis.png:pt_BR" ),
+"res://LevelsHover.png": PoolStringArray( "res://NiveisHover.png:pt_BR" ),
+"res://LevelsPressed.png": PoolStringArray( "res://NiveisPressed.png:pt_BR" ),
+"res://assets/borderButtons/playButton.png": PoolStringArray( "res://assets/borderButtons/jogarButton.png:pt_BR" ),
+"res://assets/borderButtons/playButtonHover.png": PoolStringArray( "res://assets/borderButtons/jogarButtonHover.png:pt_BR" ),
+"res://assets/borderButtons/playButtonPressed.png": PoolStringArray( "res://assets/borderButtons/jogarButtonPressed.png:pt_BR" ),
+"res://assets/borderButtons/quitButton.png": PoolStringArray( "res://assets/borderButtons/sairButton.png:pt_BR" ),
+"res://assets/borderButtons/quitButtonHover.png": PoolStringArray( "res://assets/borderButtons/sairButtonHover.png:pt_BR" ),
+"res://assets/borderButtons/quitButtonPressed.png": PoolStringArray( "res://assets/borderButtons/sairButtonPressed.png:pt_BR" ),
+"res://assets/borderButtons/settingsButton.png": PoolStringArray( "res://assets/borderButtons/configuracoesButton.png:pt_BR" ),
+"res://assets/borderButtons/settingsButtonHover.png": PoolStringArray( "res://assets/borderButtons/configuracoesButtonHover.png:pt_BR" ),
+"res://assets/borderButtons/settingsButtonPressed.png": PoolStringArray( "res://assets/borderButtons/configuracoesButtonPressed.png:pt_BR" )
 }
 
 [physics]

@@ -15,3 +15,14 @@ func _ready():
 	Global.GRAVITY = 64
 	Global.JUMP_FORCE = 2150
 	$Portal/AnimatedSprite.visible = false
+
+func _process(delta):
+	
+	#Calls the dimension node
+	if Input.is_action_just_pressed("dimensions"):
+		GlobalDeckBuilder.sceneToReturnTo = get_filename()
+		get_tree().change_scene("res://DeckBuilder/Scenes/Dimensions.tscn")
+
+
+func _on_Area2D_body_entered(body):
+	GlobalTexts.dialogueStart = true

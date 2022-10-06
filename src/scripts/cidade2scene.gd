@@ -14,8 +14,6 @@ func _ready():
 	Global.AIR_RESISTANCE = 1
 	Global.GRAVITY = 43
 	Global.JUMP_FORCE = 1450
-	
-
 
 
 func _on_Cidade2Area_body_entered(body):
@@ -25,3 +23,18 @@ func _on_Cidade2Area_body_entered(body):
 
 func _on_Cidade2Area_body_exited(body):
 	$Player.z_index = 0
+
+func _process(delta):
+	
+	#Calls the dimension node
+	if Input.is_action_just_pressed("dimensions"):
+		GlobalDeckBuilder.sceneToReturnTo = get_filename()
+		get_tree().change_scene("res://DeckBuilder/Scenes/Dimensions.tscn")
+
+
+func _on_Area2D_body_exited(body):
+	GlobalTexts.dialogueStart = true
+
+
+func _on_Area2D_body_entered(body):
+	GlobalTexts.dialogueStart = true

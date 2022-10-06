@@ -4,10 +4,10 @@ var pre_arrow = preload("res://scenes/arrow.tscn")#this function preloads the ar
 var pre_air = preload("res://scenes/air.tscn")#this function preloads the air scene will be used in air function
 onready var originalPosition = position #sets the original position to the position the enemy starts in the scene
 var dataAttack = [
-	{"nome":"attack", "valor":5},
-	{"nome":"melee", "valor":10},
-	{"nome":"shield", "valor":5},
-	{"nome":"spin", "valor":12}
+	{"nome":"attack", "valor":15},
+	{"nome":"melee", "valor":20},
+	{"nome":"shield", "valor":20},
+	{"nome":"spin", "valor":10}
 ]#this is a list of dictionaries from which animations and damage are taken, this list is randomized on the line 34
 var move = false #motion variable
 var attack = false #attack variable
@@ -27,12 +27,14 @@ func _ready():
 	listAttack()
 	GlobalBattle.reset()
 	GlobalBattle.enemyName = "Archer"
-	
+
+#create a list of random attacks
 func listAttack():
 	for i in range(40):
 		animacao = randi() % dataAttack.size()
 		listAttack.append(dataAttack[animacao])
 	
+#responsible for the management of each type of attack
 func dataAttack():
 	if action:
 		animation = listAttack[0].nome
@@ -51,6 +53,7 @@ func dataAttack():
 		GlobalCards.drawCards = true
 		listAttack.pop_front()
 		
+#when endRound pressed
 func _on_TextureButton_pressed():
 	if not GlobalBattle.cantClick: 
 		"""not GlobalCards.waitCardExtinguish and""" 
@@ -59,7 +62,8 @@ func _on_TextureButton_pressed():
 		GlobalBattle.cantClick = true
 		dataAttack()
 		get_parent().get_node("enemyData").decreaseNextEnemyAttack()
-	
+
+#responsible for the management of each type of attack
 func actions():
 	if animation == "melee":
 		position.x -= 4.1
@@ -77,10 +81,12 @@ func actions():
 			if floor(modulate.a8) == 0:
 				visible = false
 				queue_free()
-				
+
+#chancge animation for running
 func run():
 	animation = "run"
-			
+
+#makes the enemy get back to its orignal posistion
 func moveBack():
 	if not death:
 		if moveBack:
@@ -94,19 +100,21 @@ func moveBack():
 				
 				GlobalBattle.cantClick = false
 				
+
 func increaseLife(value):
 	get_parent().get_node("enemyHealthBar").increaseLife(value)
 
 func decreaseLife():
 	get_parent().get_node("enemyHealthBar").decreaseLife(GlobalBattle.heroDamage)
 
+#instance an arrow
 func Arrow():
 	yield(get_tree().create_timer(1.2), "timeout")
 	var arrow = pre_arrow.instance()
 	get_parent().add_child(arrow)
 	#$arrow.play()
 	
-	
+#instance air
 func air():
 	yield(get_tree().create_timer(0.2), "timeout")
 	var air = pre_air.instance()
@@ -114,12 +122,13 @@ func air():
 	#$laser.play()
 	
 	
-	
+#detects the collision with the enemy
 func _on_hitbox_area_entered(area):
 	if position != originalPosition:
 		move = false
 		attack = true
 	
+#detects collision for recieve damage
 func _on_hurtBox_area_entered(area):
 	if position == originalPosition:
 		animation = "damage"
@@ -132,7 +141,7 @@ func _on_hurtBox_area_entered(area):
 		print("tomou dano - vida inimigo:", get_parent().get_node("enemyHealthBar/HealthBar").value)
 		print("vida hero:", get_parent().get_node("heroHealthBar/HealthBar").value)
 
-
+#when animation finished change states
 func _on_Archer_animation_finished():
 	if not death and not moveBack:
 		if animation == "melee":

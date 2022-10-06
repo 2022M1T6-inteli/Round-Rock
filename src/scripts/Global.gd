@@ -9,3 +9,6 @@ var FRICTION = 50
 var AIR_RESISTANCE = 1
 var GRAVITY = 60
 var JUMP_FORCE = 2100
+var lastScene
+
+var language = 0

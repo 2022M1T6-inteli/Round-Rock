@@ -1,11 +1,6 @@
 extends Label
 
 
-# Declare member variables here. Examples:
-# var a = 2
-# var b = "text"
-
-
-# Called when the node enters the scene tree for the first time.
+# Defines the text of the title label according to the selected dimension
 func _ready():
 	text = GlobalDeckBuilder.dimension

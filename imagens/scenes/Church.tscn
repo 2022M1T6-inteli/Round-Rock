@@ -1,0 +1,162 @@
+[gd_scene load_steps=20 format=2]
+
+[ext_resource path="res://assets/church/ChurchBG.png" type="Texture" id=1]
+[ext_resource path="res://scenes/player.tscn" type="PackedScene" id=2]
+[ext_resource path="res://scripts/Churchscene.gd" type="Script" id=3]
+[ext_resource path="res://scenes/cardBackTextureButton.gd" type="Script" id=4]
+[ext_resource path="res://scenes/Portal.tscn" type="PackedScene" id=5]
+[ext_resource path="res://scenes/FallZone.tscn" type="PackedScene" id=6]
+[ext_resource path="res://assets/cardBack.png" type="Texture" id=7]
+[ext_resource path="res://assets/maps/Warrior_SheetnoEffect.png" type="Texture" id=8]
+[ext_resource path="res://scenes/dialoguePlatform.tscn" type="PackedScene" id=9]
+[ext_resource path="res://scenes/PauseMenu.tscn" type="PackedScene" id=10]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 48, 1027 )
+
+[sub_resource type="AtlasTexture" id=63]
+atlas = ExtResource( 8 )
+region = Rect2( 0, 0, 69, 44 )
+
+[sub_resource type="AtlasTexture" id=64]
+atlas = ExtResource( 8 )
+region = Rect2( 69, 0, 69, 44 )
+
+[sub_resource type="AtlasTexture" id=65]
+atlas = ExtResource( 8 )
+region = Rect2( 138, 0, 69, 44 )
+
+[sub_resource type="AtlasTexture" id=66]
+atlas = ExtResource( 8 )
+region = Rect2( 207, 0, 69, 44 )
+
+[sub_resource type="AtlasTexture" id=59]
+atlas = ExtResource( 8 )
+region = Rect2( 276, 0, 69, 44 )
+
+[sub_resource type="AtlasTexture" id=67]
+atlas = ExtResource( 8 )
+region = Rect2( 345, 0, 69, 44 )
+
+[sub_resource type="SpriteFrames" id=61]
+animations = [ {
+"frames": [ SubResource( 63 ), SubResource( 64 ), SubResource( 65 ), SubResource( 66 ), SubResource( 59 ), SubResource( 67 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[sub_resource type="RectangleShape2D" id=62]
+extents = Vector2( 114.5, 66.0001 )
+
+[node name="Church" type="Sprite"]
+position = Vector2( 2048, 1024 )
+texture = ExtResource( 1 )
+script = ExtResource( 3 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionPolygon2D8" type="CollisionPolygon2D" parent="StaticBody2D"]
+polygon = PoolVector2Array( -1182, -86, -1182, -34, -676, -34, -675, -83 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D"]
+polygon = PoolVector2Array( -2043, 923, -1227, 931, -1219, 990, 1473, 986, 1475, 952, 1574, 950, 1572, 918, 1668, 918, 1666, 891, 1761, 891, 1763, 829, 2045, 832, 2049, 1026, -2044, 1022 )
+
+[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="StaticBody2D"]
+polygon = PoolVector2Array( 1121, 619, 1121, 703, 1630, 704, 1629, 682, 1563, 683, 1564, 650, 1309, 650, 1310, 618 )
+
+[node name="CollisionPolygon2D3" type="CollisionPolygon2D" parent="StaticBody2D"]
+polygon = PoolVector2Array( 449, 553, 448, 607, 957, 608, 957, 556 )
+
+[node name="CollisionPolygon2D4" type="CollisionPolygon2D" parent="StaticBody2D"]
+polygon = PoolVector2Array( -319, 425, -319, 479, 287, 479, 287, 426 )
+
+[node name="CollisionPolygon2D5" type="CollisionPolygon2D" parent="StaticBody2D"]
+polygon = PoolVector2Array( -1054, 491, -1054, 544, -483, 542, -483, 491 )
+
+[node name="CollisionPolygon2D6" type="CollisionPolygon2D" parent="StaticBody2D"]
+polygon = PoolVector2Array( -2046, 331, -2045, 446, -1155, 446, -1156, 395, -1889, 399, -1889, 330 )
+
+[node name="CollisionPolygon2D7" type="CollisionPolygon2D" parent="StaticBody2D"]
+polygon = PoolVector2Array( -1727, 137, -1726, 191, -1248, 192, -1250, 136 )
+
+[node name="CollisionPolygon2D9" type="CollisionPolygon2D" parent="StaticBody2D"]
+polygon = PoolVector2Array( -511, -214, -510, -161, 31, -160, 28, -212 )
+
+[node name="CollisionPolygon2D10" type="CollisionPolygon2D" parent="StaticBody2D"]
+polygon = PoolVector2Array( 65, -312, 66, -258, 700, -258, 701, -309 )
+
+[node name="CollisionPolygon2D11" type="CollisionPolygon2D" parent="StaticBody2D"]
+polygon = PoolVector2Array( -926, -407, -926, -351, -576, -352, -578, -405 )
+
+[node name="CollisionPolygon2D12" type="CollisionPolygon2D" parent="StaticBody2D"]
+polygon = PoolVector2Array( -1214, -567, -1214, -514, -963, -513, -963, -564 )
+
+[node name="CollisionPolygon2D13" type="CollisionPolygon2D" parent="StaticBody2D"]
+polygon = PoolVector2Array( -2043, -628, -2043, -547, -1314, -547, -1314, -629 )
+
+[node name="CollisionPolygon2D14" type="CollisionPolygon2D" parent="StaticBody2D"]
+polygon = PoolVector2Array( 770, -407, 771, -352, 1372, -350, 1373, -404 )
+
+[node name="CollisionPolygon2D15" type="CollisionPolygon2D" parent="StaticBody2D"]
+polygon = PoolVector2Array( 1410, -375, 1411, -288, 2043, -290, 2043, -373 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2( -2093, -3 )
+shape = SubResource( 1 )
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2( 2094, 4 )
+shape = SubResource( 1 )
+
+[node name="Player" parent="." instance=ExtResource( 2 )]
+position = Vector2( -784, 371 )
+
+[node name="cardBackCanvasLayer" type="CanvasLayer" parent="Player"]
+
+[node name="cardBackTextureButton" type="TextureButton" parent="Player/cardBackCanvasLayer"]
+margin_left = 889.0
+margin_top = 21.0
+margin_right = 1220.0
+margin_bottom = 504.0
+rect_scale = Vector2( 0.3, 0.3 )
+texture_normal = ExtResource( 7 )
+script = ExtResource( 4 )
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="Portal" parent="." instance=ExtResource( 5 )]
+position = Vector2( 1964, -438 )
+sceneToGo = "res://scenes/ChurchBattle.tscn"
+
+[node name="Area2D" parent="." instance=ExtResource( 6 )]
+position = Vector2( -18, 1197 )
+scale = Vector2( 14, 1 )
+
+[node name="Area2D2" type="Area2D" parent="."]
+position = Vector2( -1894, -802 )
+scale = Vector2( 15, 15 )
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="Area2D2"]
+position = Vector2( 0.210452, 6.06548 )
+scale = Vector2( 0.156219, 0.221158 )
+frames = SubResource( 61 )
+frame = 3
+playing = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D2"]
+position = Vector2( 0.200012, 4.93335 )
+scale = Vector2( 0.0666667, 0.0666667 )
+shape = SubResource( 62 )
+
+[node name="Control" parent="." instance=ExtResource( 9 )]
+margin_left = -2299.0
+margin_top = -892.0
+margin_right = -2299.0
+margin_bottom = -892.0
+rect_scale = Vector2( 1.44, 1.2 )
+
+[node name="CanvasLayer" parent="." instance=ExtResource( 10 )]
+
+[connection signal="body_entered" from="Area2D2" to="." method="_on_Area2D2_body_entered"]

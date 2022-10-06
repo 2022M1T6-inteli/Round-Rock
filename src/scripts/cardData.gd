@@ -5,6 +5,7 @@ var nextCards = 0
 func _ready():
 	text = ""
 
+#show next cards whe Data-Driven card is used
 func showNextCards(n):
 	if not GlobalCards.noMoreCards:
 		if nextCards >= GlobalCards.nextCard + GlobalBattle.showNextCards:
@@ -25,6 +26,7 @@ func showNextCards(n):
 		#acabou cartas
 		pass
 		
+#decrease the shown cards information
 func decreaseNextCards():
 	if nextCards > GlobalCards.nextCard + GlobalBattle.showNextCards:
 		text = "Next cards: \n"

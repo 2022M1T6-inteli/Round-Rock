@@ -5,7 +5,7 @@ onready var originalPosition = position #sets the original position to the posit
 var dataAttack = [
 	{"nome":"attack", "valor":10},
 	{"nome":"melee", "valor":15},
-	{"nome":"shield", "valor":5},
+	#{"nome":"shield", "valor":5},
 ]#this is a list of dictionaries from which animations and damage are taken, this list is randomized on the line 34
 var move = false #motion variable
 var attack = false #attack variable

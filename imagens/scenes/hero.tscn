@@ -11,37 +11,37 @@
 [ext_resource path="res://assets/heroi/Attack2.png" type="Texture" id=9]
 [ext_resource path="res://assets/sounds/attack_hero.wav" type="AudioStream" id=11]
 
-[sub_resource type="AtlasTexture" id=55]
-atlas = ExtResource( 9 )
+[sub_resource type="AtlasTexture" id=1]
+atlas = ExtResource( 1 )
 region = Rect2( 0, 0, 160, 111 )
 
-[sub_resource type="AtlasTexture" id=56]
-atlas = ExtResource( 9 )
+[sub_resource type="AtlasTexture" id=2]
+atlas = ExtResource( 1 )
 region = Rect2( 160, 0, 160, 111 )
 
-[sub_resource type="AtlasTexture" id=57]
-atlas = ExtResource( 9 )
+[sub_resource type="AtlasTexture" id=3]
+atlas = ExtResource( 1 )
 region = Rect2( 320, 0, 160, 111 )
 
-[sub_resource type="AtlasTexture" id=58]
-atlas = ExtResource( 9 )
+[sub_resource type="AtlasTexture" id=4]
+atlas = ExtResource( 1 )
 region = Rect2( 480, 0, 160, 111 )
 
-[sub_resource type="AtlasTexture" id=9]
-atlas = ExtResource( 2 )
-region = Rect2( 0, 0, 160, 111 )
+[sub_resource type="AtlasTexture" id=5]
+atlas = ExtResource( 1 )
+region = Rect2( 640, 0, 160, 111 )
 
-[sub_resource type="AtlasTexture" id=10]
-atlas = ExtResource( 2 )
-region = Rect2( 160, 0, 160, 111 )
+[sub_resource type="AtlasTexture" id=6]
+atlas = ExtResource( 1 )
+region = Rect2( 800, 0, 160, 111 )
 
-[sub_resource type="AtlasTexture" id=11]
-atlas = ExtResource( 2 )
-region = Rect2( 320, 0, 160, 111 )
+[sub_resource type="AtlasTexture" id=7]
+atlas = ExtResource( 1 )
+region = Rect2( 960, 0, 160, 111 )
 
-[sub_resource type="AtlasTexture" id=12]
-atlas = ExtResource( 2 )
-region = Rect2( 480, 0, 160, 111 )
+[sub_resource type="AtlasTexture" id=8]
+atlas = ExtResource( 1 )
+region = Rect2( 1120, 0, 160, 111 )
 
 [sub_resource type="AtlasTexture" id=16]
 atlas = ExtResource( 3 )
@@ -83,6 +83,22 @@ region = Rect2( 640, 0, 160, 111 )
 atlas = ExtResource( 6 )
 region = Rect2( 800, 0, 160, 111 )
 
+[sub_resource type="AtlasTexture" id=9]
+atlas = ExtResource( 2 )
+region = Rect2( 0, 0, 160, 111 )
+
+[sub_resource type="AtlasTexture" id=10]
+atlas = ExtResource( 2 )
+region = Rect2( 160, 0, 160, 111 )
+
+[sub_resource type="AtlasTexture" id=11]
+atlas = ExtResource( 2 )
+region = Rect2( 320, 0, 160, 111 )
+
+[sub_resource type="AtlasTexture" id=12]
+atlas = ExtResource( 2 )
+region = Rect2( 480, 0, 160, 111 )
+
 [sub_resource type="AtlasTexture" id=26]
 atlas = ExtResource( 5 )
 region = Rect2( 0, 0, 160, 111 )
@@ -115,19 +131,19 @@ region = Rect2( 960, 0, 160, 111 )
 atlas = ExtResource( 5 )
 region = Rect2( 1120, 0, 160, 111 )
 
-[sub_resource type="AtlasTexture" id=40]
+[sub_resource type="AtlasTexture" id=55]
 atlas = ExtResource( 9 )
 region = Rect2( 0, 0, 160, 111 )
 
-[sub_resource type="AtlasTexture" id=41]
+[sub_resource type="AtlasTexture" id=56]
 atlas = ExtResource( 9 )
 region = Rect2( 160, 0, 160, 111 )
 
-[sub_resource type="AtlasTexture" id=42]
+[sub_resource type="AtlasTexture" id=57]
 atlas = ExtResource( 9 )
 region = Rect2( 320, 0, 160, 111 )
 
-[sub_resource type="AtlasTexture" id=43]
+[sub_resource type="AtlasTexture" id=58]
 atlas = ExtResource( 9 )
 region = Rect2( 480, 0, 160, 111 )
 
@@ -191,48 +207,27 @@ region = Rect2( 320, 0, 160, 111 )
 atlas = ExtResource( 8 )
 region = Rect2( 480, 0, 160, 111 )
 
-[sub_resource type="AtlasTexture" id=1]
-atlas = ExtResource( 1 )
+[sub_resource type="AtlasTexture" id=40]
+atlas = ExtResource( 9 )
 region = Rect2( 0, 0, 160, 111 )
 
-[sub_resource type="AtlasTexture" id=2]
-atlas = ExtResource( 1 )
+[sub_resource type="AtlasTexture" id=41]
+atlas = ExtResource( 9 )
 region = Rect2( 160, 0, 160, 111 )
 
-[sub_resource type="AtlasTexture" id=3]
-atlas = ExtResource( 1 )
+[sub_resource type="AtlasTexture" id=42]
+atlas = ExtResource( 9 )
 region = Rect2( 320, 0, 160, 111 )
 
-[sub_resource type="AtlasTexture" id=4]
-atlas = ExtResource( 1 )
+[sub_resource type="AtlasTexture" id=43]
+atlas = ExtResource( 9 )
 region = Rect2( 480, 0, 160, 111 )
-
-[sub_resource type="AtlasTexture" id=5]
-atlas = ExtResource( 1 )
-region = Rect2( 640, 0, 160, 111 )
-
-[sub_resource type="AtlasTexture" id=6]
-atlas = ExtResource( 1 )
-region = Rect2( 800, 0, 160, 111 )
-
-[sub_resource type="AtlasTexture" id=7]
-atlas = ExtResource( 1 )
-region = Rect2( 960, 0, 160, 111 )
-
-[sub_resource type="AtlasTexture" id=8]
-atlas = ExtResource( 1 )
-region = Rect2( 1120, 0, 160, 111 )
 
 [sub_resource type="SpriteFrames" id=13]
 animations = [ {
-"frames": [ SubResource( 55 ), SubResource( 56 ), SubResource( 57 ), SubResource( 58 ) ],
+"frames": [ SubResource( 1 ), SubResource( 2 ), SubResource( 3 ), SubResource( 4 ), SubResource( 5 ), SubResource( 6 ), SubResource( 7 ), SubResource( 8 ) ],
 "loop": true,
-"name": "handsUp",
-"speed": 9.0
-}, {
-"frames": [ SubResource( 9 ), SubResource( 10 ), SubResource( 11 ), SubResource( 12 ) ],
-"loop": true,
-"name": "attack",
+"name": "idle",
 "speed": 8.0
 }, {
 "frames": [ SubResource( 16 ), SubResource( 17 ), SubResource( 18 ), SubResource( 19 ) ],
@@ -245,15 +240,20 @@ animations = [ {
 "name": "death",
 "speed": 7.0
 }, {
+"frames": [ SubResource( 9 ), SubResource( 10 ), SubResource( 11 ), SubResource( 12 ) ],
+"loop": true,
+"name": "attack",
+"speed": 8.0
+}, {
 "frames": [ SubResource( 26 ), SubResource( 27 ), SubResource( 28 ), SubResource( 29 ), SubResource( 30 ), SubResource( 31 ), SubResource( 32 ), SubResource( 33 ) ],
 "loop": true,
 "name": "run",
 "speed": 10.0
 }, {
-"frames": [ SubResource( 40 ), SubResource( 41 ), SubResource( 42 ), SubResource( 43 ) ],
+"frames": [ SubResource( 55 ), SubResource( 56 ), SubResource( 57 ), SubResource( 58 ) ],
 "loop": true,
-"name": "attack2",
-"speed": 5.0
+"name": "handsUp",
+"speed": 9.0
 }, {
 "frames": [ SubResource( 36 ), SubResource( 37 ), SubResource( 38 ), SubResource( 39 ) ],
 "loop": true,
@@ -265,10 +265,10 @@ animations = [ {
 "name": "attackEspecial",
 "speed": 5.0
 }, {
-"frames": [ SubResource( 1 ), SubResource( 2 ), SubResource( 3 ), SubResource( 4 ), SubResource( 5 ), SubResource( 6 ), SubResource( 7 ), SubResource( 8 ) ],
+"frames": [ SubResource( 40 ), SubResource( 41 ), SubResource( 42 ), SubResource( 43 ) ],
 "loop": true,
-"name": "idle",
-"speed": 8.0
+"name": "attack2",
+"speed": 5.0
 } ]
 
 [sub_resource type="CapsuleShape2D" id=34]

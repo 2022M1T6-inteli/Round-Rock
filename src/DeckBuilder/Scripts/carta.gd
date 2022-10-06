@@ -3,7 +3,7 @@ extends Node2D
 #variables used to move the card to de center of the screen and than move back to it's original position
 onready var originalPosition = position
 onready var originalScale = scale
-onready var centerPosition = Vector2(get_viewport().size.x/2, get_viewport().size.y/2)
+onready var centerPosition = Vector2(512,288)#Vector2(get_viewport().size.x/2, get_viewport().size.y/2)
 
 #varibale utilized to queu.free()
 onready var extinguish = false
@@ -21,7 +21,8 @@ var heal
 var multiply
 var plus
 var scry
-var data
+var dataCard
+var dataEnemy
 
 
 func _physics_process(delta):
@@ -66,12 +67,70 @@ func zIndex():
 	else:
 		z_index = lerp(z_index, 0, 0.05)
 		
+		
+func battleAction():
+	match type:
+		"deployment":
+			GlobalBattle.heroTotalMana += 1
+			GlobalBattle.heroActualMana += 1
+			GlobalBattle.cantClick = false
+		"business":
+			if damage != 0:
+				GlobalBattle.heroDamage = damage * GlobalBattle.heroMultiply + GlobalBattle.heroDamagePlus + GlobalBattle.heroPlus
+				
+				if GlobalBattle.heroUserKpi: GlobalBattle.heroDamage *= 2
+				
+				get_parent().get_node("hero").moveFoward = true
+				GlobalBattle.heroDamagePlus = 0
+			else:#shield
+				shield *= GlobalBattle.heroMultiply
+				shield += GlobalBattle.heroPlus
+				
+				if GlobalBattle.heroUserKpi: shield*= 2
+				
+				get_parent().get_node("heroHealthBar").increaseShield(shield)
+				GlobalBattle.cantClick = false
+			GlobalBattle.heroMultiply = 1
+			GlobalBattle.heroPlus = 0
+		"vision":
+			if heal != 0:
+				if GlobalBattle.heroUserKpi: 
+					GlobalBattle.camera.shake(0.5,5)
+					get_parent().get_node("heroHealthBar").decreaseUserKpi()
+					heal *= 2
+				get_parent().get_node("hero").handsUp()
+				get_parent().get_node("heroHealthBar").increaseLife(heal * GlobalBattle.heroMultiply + GlobalBattle.heroPlus)
+			else:
+				GlobalBattle.heroDamagePlus = plus
+			GlobalBattle.heroMultiply = 1
+			GlobalBattle.cantClick = false
+		"data":
+			get_parent().get_node("hero").handsUp()
+			if dataCard != 0:
+				get_parent().get_node("cardData").showNextCards(5*GlobalBattle.heroMultiply)
+			else:#dataEnemy
+				get_parent().get_node("enemyData").showNextEnemyAttack(5*GlobalBattle.heroMultiply)
+			
+			GlobalBattle.heroMultiply = 1
+			GlobalBattle.cantClick = false
+		"quality":
+			get_parent().get_node("hero").handsUp()
+			if multiply != 0:
+				GlobalBattle.heroMultiply = multiply
+			else:
+				GlobalBattle.heroPlus = plus
+			GlobalBattle.cantClick = false
+		
 func showHowManyCopiesInDeck():
 	var count = 0
 	for dict in GlobalDeckBuilder.deckDictionary:
 		if dict.name == $name.text:
 			count += 1
 	#$cardCount.text = str(Global.deck.count(self)) + "/5"
-	$cardCount.text = str(count) + "/5"
+	if not type == "deployment":
+		$cardCount.text = str(count) + "/5"
+	else:
+		$cardCount.text = str(count) + "/30"
+		
 		
 

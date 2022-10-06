@@ -1,4 +1,4 @@
-[gd_scene load_steps=36 format=2]
+[gd_scene load_steps=42 format=2]
 
 [ext_resource path="res://scripts/MainMenu.gd" type="Script" id=1]
 [ext_resource path="res://assets/background/back_7.png" type="Texture" id=2]
@@ -8,16 +8,16 @@
 [ext_resource path="res://assets/dragon/flying_dragon-gold 1.png" type="Texture" id=6]
 [ext_resource path="res://assets/dragon/flying_dragon-gold 3.png" type="Texture" id=7]
 [ext_resource path="res://assets/castledell.png" type="Texture" id=8]
-[ext_resource path="res://assets/borderButtons/playButton.png" type="Texture" id=9]
-[ext_resource path="res://assets/borderButtons/settingsButton.png" type="Texture" id=10]
-[ext_resource path="res://assets/borderButtons/quitButto.png" type="Texture" id=11]
-[ext_resource path="res://assets/borderButtons/playButtonpressed.png" type="Texture" id=12]
-[ext_resource path="res://assets/borderButtons/settingsButtonpressed.png" type="Texture" id=13]
-[ext_resource path="res://assets/borderButtons/quitButtonpressed.png" type="Texture" id=14]
+[ext_resource path="res://assets/borderButtons/quitButtonPressed.png" type="Texture" id=9]
+[ext_resource path="res://assets/borderButtons/playButtonHover.png" type="Texture" id=10]
+[ext_resource path="res://assets/borderButtons/playButtonPressed.png" type="Texture" id=11]
+[ext_resource path="res://assets/borderButtons/playButton.png" type="Texture" id=12]
+[ext_resource path="res://assets/borderButtons/quitButton.png" type="Texture" id=13]
+[ext_resource path="res://assets/borderButtons/settingsButton.png" type="Texture" id=14]
 [ext_resource path="res://assets/sounds/medieval sound.mp3" type="AudioStream" id=15]
 [ext_resource path="res://assets/background/back_3.png" type="Texture" id=16]
 [ext_resource path="res://assets/background/back_4.png" type="Texture" id=17]
-[ext_resource path="res://assets/borderButtons/quitButtonhover.png" type="Texture" id=18]
+[ext_resource path="res://assets/borderButtons/settingsButtonPressed.png" type="Texture" id=18]
 [ext_resource path="res://assets/background/back_5.png" type="Texture" id=19]
 [ext_resource path="res://assets/background/back_6.png" type="Texture" id=20]
 [ext_resource path="res://assets/background/back_8.png" type="Texture" id=21]
@@ -27,10 +27,16 @@
 [ext_resource path="res://assets/background/back_11.png" type="Texture" id=25]
 [ext_resource path="res://assets/background/back_12.png" type="Texture" id=26]
 [ext_resource path="res://assets/background/back_9.png" type="Texture" id=27]
-[ext_resource path="res://assets/borderButtons/settingsButtonhover.png" type="Texture" id=28]
-[ext_resource path="res://assets/borderButtons/playButtonhover.png" type="Texture" id=29]
+[ext_resource path="res://assets/borderButtons/settingsButtonHover.png" type="Texture" id=28]
+[ext_resource path="res://assets/borderButtons/quitButtonHover.png" type="Texture" id=29]
 [ext_resource path="res://assets/sounds/wood-hard-hit.mp3" type="AudioStream" id=30]
 [ext_resource path="res://assets/background/contour.png" type="Texture" id=31]
+[ext_resource path="res://assets/borderButtons/usa copy.png" type="Texture" id=32]
+[ext_resource path="res://assets/borderButtons/brazil copy.png" type="Texture" id=33]
+[ext_resource path="res://scenes/Settings.tscn" type="PackedScene" id=34]
+[ext_resource path="res://LevelsHover.png" type="Texture" id=35]
+[ext_resource path="res://Levels.png" type="Texture" id=36]
+[ext_resource path="res://LevelsPressed.png" type="Texture" id=37]
 
 [sub_resource type="SpriteFrames" id=4]
 animations = [ {
@@ -50,10 +56,24 @@ animations = [ {
 
 [sub_resource type="LargeTexture" id=3]
 
-[sub_resource type="TileSet" id=5]
+[sub_resource type="TileSet" id=157]
+0/name = "contour.png 0"
+0/texture = ExtResource( 31 )
+0/tex_offset = Vector2( 0, 0 )
+0/modulate = Color( 1, 1, 1, 1 )
+0/region = Rect2( 0, 16, 48, 144 )
+0/tile_mode = 0
+0/occluder_offset = Vector2( 0, 0 )
+0/navigation_offset = Vector2( 0, 0 )
+0/shape_offset = Vector2( 0, 0 )
+0/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+0/shape_one_way = false
+0/shape_one_way_margin = 0.0
+0/shapes = [  ]
+0/z_index = 0
 
-[node name="Node2D" type="Node2D"]
-position = Vector2( 11, -24 )
+[node name="MainMenu" type="Node2D"]
+position = Vector2( 9, -22 )
 scale = Vector2( 0.525307, 0.554606 )
 script = ExtResource( 1 )
 
@@ -71,7 +91,7 @@ bus = "Effects"
 position = Vector2( 954.032, 578.805 )
 scale = Vector2( 1.01176, 1.00537 )
 frames = SubResource( 4 )
-frame = 3
+frame = 12
 playing = true
 
 [node name="Castledell" type="Sprite" parent="."]
@@ -87,273 +107,89 @@ frames = SubResource( 1 )
 playing = true
 
 [node name="play_button" type="TextureButton" parent="."]
-margin_left = 783.331
-margin_top = 449.272
-margin_right = 1055.33
-margin_bottom = 518.272
+margin_left = 797.629
+margin_top = 391.269
+margin_right = 1069.63
+margin_bottom = 460.269
 rect_scale = Vector2( 1.27532, 1.59339 )
-texture_normal = ExtResource( 9 )
-texture_pressed = ExtResource( 12 )
-texture_hover = ExtResource( 29 )
+texture_normal = ExtResource( 12 )
+texture_pressed = ExtResource( 11 )
+texture_hover = ExtResource( 10 )
+expand = true
+stretch_mode = 6
+
+[node name="level_select" type="TextureButton" parent="."]
+margin_left = 797.629
+margin_top = 517.484
+margin_right = 1069.63
+margin_bottom = 586.484
+rect_scale = Vector2( 1.27532, 1.59339 )
+texture_normal = ExtResource( 36 )
+texture_pressed = ExtResource( 37 )
+texture_hover = ExtResource( 35 )
 expand = true
 stretch_mode = 6
 
 [node name="settings_button" type="TextureButton" parent="."]
-margin_left = 783.331
-margin_top = 590.272
-margin_right = 1055.33
-margin_bottom = 659.272
+margin_left = 797.629
+margin_top = 641.897
+margin_right = 1069.63
+margin_bottom = 710.897
 rect_scale = Vector2( 1.27987, 1.5894 )
-texture_normal = ExtResource( 10 )
-texture_pressed = ExtResource( 13 )
+texture_normal = ExtResource( 14 )
+texture_pressed = ExtResource( 18 )
 texture_hover = ExtResource( 28 )
 texture_focused = SubResource( 3 )
 expand = true
 stretch_mode = 6
 
 [node name="quit_button" type="TextureButton" parent="."]
-margin_left = 784.331
-margin_top = 729.272
-margin_right = 1056.33
-margin_bottom = 798.272
+margin_left = 797.629
+margin_top = 775.325
+margin_right = 1069.63
+margin_bottom = 844.325
 rect_scale = Vector2( 1.27161, 1.61799 )
-texture_normal = ExtResource( 11 )
-texture_pressed = ExtResource( 14 )
-texture_hover = ExtResource( 18 )
+texture_normal = ExtResource( 13 )
+texture_pressed = ExtResource( 9 )
+texture_hover = ExtResource( 29 )
 expand = true
 stretch_mode = 6
 
-[node name="TileMap" type="TileMap" parent="."]
-tile_set = SubResource( 5 )
+[node name="Border" type="TileMap" parent="."]
+position = Vector2( 0, 4 )
+tile_set = SubResource( 157 )
+cell_size = Vector2( 16, 16 )
 format = 1
+tile_data = PoolIntArray( 131070, -1610612736, 0, 65541, -1610612736, 0, 65549, -1610612736, 0, 65558, -2147483648, 0, 65565, -1610612736, 0, 65573, -1610612736, 0, 65581, -1610612736, 0, 65589, -1610612736, 0, 65597, -1610612736, 0, 65601, -1610612736, 0, 65609, -1610612736, 0, 65617, -1610612736, 0, 65625, -1610612736, 0, 65633, -1610612736, 0, 65641, -1610612736, 0, 65648, -1610612736, 0, 196606, 1610612736, 0, 131191, 0, 0, 393335, 0, 0, 720894, 1610612736, 0, 917623, 0, 0, 1245182, 1610612736, 0, 1441911, 0, 0, 1769470, 1610612736, 0, 1966199, 0, 0, 2293758, 1610612736, 0, 2490487, 0, 0, 2818046, 1610612736, 0, 3014775, 0, 0, 3342334, 1610612736, 0, 3539063, 0, 0, 3866622, 1610612736, 0, 4128766, 1610612736, 0, 4063351, 0, 0, 4456448, -1073741824, 0, 4456456, -1073741824, 0, 4456464, -1073741824, 0, 4456472, -1073741824, 0, 4456480, -1073741824, 0, 4456488, -1073741824, 0, 4456496, -1073741824, 0, 4456504, -1073741824, 0, 4456512, -1073741824, 0, 4456520, -1073741824, 0, 4456528, -1073741824, 0, 4456536, -1073741824, 0, 4456544, -1073741824, 0, 4456552, -1073741824, 0, 4456560, -1073741824, 0 )
 
-[node name="Contour" type="Sprite" parent="TileMap"]
-position = Vector2( 47.1429, 1112 )
-rotation = -1.5708
-texture = ExtResource( 31 )
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+margin_left = 894.715
+margin_top = 984.482
+margin_right = 934.715
+margin_bottom = 1024.48
+rect_scale = Vector2( 4.12198, 4.24555 )
 
-[node name="Contour2" type="Sprite" parent="TileMap"]
-position = Vector2( 181.429, 1112 )
-rotation = -1.5708
-texture = ExtResource( 31 )
+[node name="BR_button" type="TextureButton" parent="HBoxContainer"]
+margin_right = 16.0
+margin_bottom = 39.0
+texture_normal = ExtResource( 33 )
 
-[node name="Contour3" type="Sprite" parent="TileMap"]
-position = Vector2( 181.429, 1112 )
-rotation = -1.5708
-texture = ExtResource( 31 )
+[node name="EN_button" type="TextureButton" parent="HBoxContainer"]
+margin_left = 20.0
+margin_right = 36.0
+margin_bottom = 39.0
+texture_normal = ExtResource( 32 )
 
-[node name="Contour4" type="Sprite" parent="TileMap"]
-position = Vector2( 314.429, 1112 )
-rotation = -1.5708
-texture = ExtResource( 31 )
-
-[node name="Contour5" type="Sprite" parent="TileMap"]
-position = Vector2( 447.429, 1112 )
-rotation = -1.5708
-texture = ExtResource( 31 )
-
-[node name="Contour6" type="Sprite" parent="TileMap"]
-position = Vector2( 580.429, 1112 )
-rotation = -1.5708
-texture = ExtResource( 31 )
-
-[node name="Contour7" type="Sprite" parent="TileMap"]
-position = Vector2( 713.429, 1112 )
-rotation = -1.5708
-texture = ExtResource( 31 )
-
-[node name="Contour8" type="Sprite" parent="TileMap"]
-position = Vector2( 846.429, 1112 )
-rotation = -1.5708
-texture = ExtResource( 31 )
-
-[node name="Contour9" type="Sprite" parent="TileMap"]
-position = Vector2( 979.429, 1112.57 )
-rotation = -1.5708
-texture = ExtResource( 31 )
-
-[node name="Contour10" type="Sprite" parent="TileMap"]
-position = Vector2( 1112.43, 1112.57 )
-rotation = -1.5708
-texture = ExtResource( 31 )
-
-[node name="Contour11" type="Sprite" parent="TileMap"]
-position = Vector2( 1245.43, 1112.57 )
-rotation = -1.5708
-texture = ExtResource( 31 )
-
-[node name="Contour12" type="Sprite" parent="TileMap"]
-position = Vector2( 1378.43, 1112.57 )
-rotation = -1.5708
-texture = ExtResource( 31 )
-
-[node name="Contour13" type="Sprite" parent="TileMap"]
-position = Vector2( 1511.43, 1112.57 )
-rotation = -1.5708
-texture = ExtResource( 31 )
-
-[node name="Contour14" type="Sprite" parent="TileMap"]
-position = Vector2( 1644.43, 1112.57 )
-rotation = -1.5708
-texture = ExtResource( 31 )
-
-[node name="Contour15" type="Sprite" parent="TileMap"]
-position = Vector2( 1777.43, 1112.57 )
-rotation = -1.5708
-texture = ExtResource( 31 )
-
-[node name="Contour16" type="Sprite" parent="TileMap"]
-position = Vector2( 1857.43, 1112.57 )
-rotation = -1.5708
-texture = ExtResource( 31 )
-
-[node name="Contour17" type="Sprite" parent="TileMap"]
-position = Vector2( 1920, 1037.14 )
-texture = ExtResource( 31 )
-
-[node name="Contour18" type="Sprite" parent="TileMap"]
-position = Vector2( 1920, 904.143 )
-texture = ExtResource( 31 )
-
-[node name="Contour19" type="Sprite" parent="TileMap"]
-position = Vector2( 1920, 771.143 )
-texture = ExtResource( 31 )
-
-[node name="Contour20" type="Sprite" parent="TileMap"]
-position = Vector2( 1920, 638.143 )
-texture = ExtResource( 31 )
-
-[node name="Contour21" type="Sprite" parent="TileMap"]
-position = Vector2( 1920, 505.143 )
-texture = ExtResource( 31 )
-
-[node name="Contour22" type="Sprite" parent="TileMap"]
-position = Vector2( 1920, 372.143 )
-texture = ExtResource( 31 )
-
-[node name="Contour23" type="Sprite" parent="TileMap"]
-position = Vector2( 1920, 239.143 )
-texture = ExtResource( 31 )
-
-[node name="Contour24" type="Sprite" parent="TileMap"]
-position = Vector2( 1920, 106.143 )
-texture = ExtResource( 31 )
-
-[node name="Contour25" type="Sprite" parent="TileMap"]
-position = Vector2( 1858.57, 41.4286 )
-rotation = 4.71239
-texture = ExtResource( 31 )
-
-[node name="Contour26" type="Sprite" parent="TileMap"]
-position = Vector2( 1728.57, 41.4286 )
-rotation = 4.71239
-texture = ExtResource( 31 )
-
-[node name="Contour27" type="Sprite" parent="TileMap"]
-position = Vector2( 1597.14, 41.4286 )
-rotation = 4.71239
-texture = ExtResource( 31 )
-
-[node name="Contour28" type="Sprite" parent="TileMap"]
-position = Vector2( 1466.14, 41.429 )
-rotation = 4.71239
-texture = ExtResource( 31 )
-
-[node name="Contour29" type="Sprite" parent="TileMap"]
-position = Vector2( 1335.14, 41.429 )
-rotation = 4.71239
-texture = ExtResource( 31 )
-
-[node name="Contour30" type="Sprite" parent="TileMap"]
-position = Vector2( 1204.14, 41.429 )
-rotation = 4.71239
-texture = ExtResource( 31 )
-
-[node name="Contour31" type="Sprite" parent="TileMap"]
-position = Vector2( 1073.14, 41.429 )
-rotation = 4.71239
-texture = ExtResource( 31 )
-
-[node name="Contour32" type="Sprite" parent="TileMap"]
-position = Vector2( 942.143, 41.429 )
-rotation = 4.71239
-texture = ExtResource( 31 )
-
-[node name="Contour33" type="Sprite" parent="TileMap"]
-position = Vector2( 811.143, 41.429 )
-rotation = 4.71239
-texture = ExtResource( 31 )
-
-[node name="Contour34" type="Sprite" parent="TileMap"]
-position = Vector2( 680.143, 41.429 )
-rotation = 4.71239
-texture = ExtResource( 31 )
-
-[node name="Contour35" type="Sprite" parent="TileMap"]
-position = Vector2( 549.143, 41.429 )
-rotation = 4.71239
-texture = ExtResource( 31 )
-
-[node name="Contour36" type="Sprite" parent="TileMap"]
-position = Vector2( 418.143, 41.429 )
-rotation = 4.71239
-texture = ExtResource( 31 )
-
-[node name="Contour37" type="Sprite" parent="TileMap"]
-position = Vector2( 287.143, 41.429 )
-rotation = 4.71239
-texture = ExtResource( 31 )
-
-[node name="Contour38" type="Sprite" parent="TileMap"]
-position = Vector2( 156.143, 41.429 )
-rotation = 4.71239
-texture = ExtResource( 31 )
-
-[node name="Contour39" type="Sprite" parent="TileMap"]
-position = Vector2( 46.143, 41.429 )
-rotation = 4.71239
-texture = ExtResource( 31 )
-
-[node name="Contour40" type="Sprite" parent="TileMap"]
-position = Vector2( -7.14286, 114.286 )
-rotation = 6.28319
-texture = ExtResource( 31 )
-
-[node name="Contour41" type="Sprite" parent="TileMap"]
-position = Vector2( -7.143, 246.286 )
-rotation = 6.28319
-texture = ExtResource( 31 )
-
-[node name="Contour42" type="Sprite" parent="TileMap"]
-position = Vector2( -7.143, 378.286 )
-rotation = 6.28319
-texture = ExtResource( 31 )
-
-[node name="Contour43" type="Sprite" parent="TileMap"]
-position = Vector2( -7.143, 510.286 )
-rotation = 6.28319
-texture = ExtResource( 31 )
-
-[node name="Contour44" type="Sprite" parent="TileMap"]
-position = Vector2( -7.143, 642.286 )
-rotation = 6.28319
-texture = ExtResource( 31 )
-
-[node name="Contour45" type="Sprite" parent="TileMap"]
-position = Vector2( -7.143, 774.286 )
-rotation = 6.28319
-texture = ExtResource( 31 )
-
-[node name="Contour46" type="Sprite" parent="TileMap"]
-position = Vector2( -7.143, 906.286 )
-rotation = 6.28319
-texture = ExtResource( 31 )
-
-[node name="Contour47" type="Sprite" parent="TileMap"]
-position = Vector2( -7.143, 1038.29 )
-rotation = 6.28319
-texture = ExtResource( 31 )
+[node name="PauseMenu" parent="." instance=ExtResource( 34 )]
+visible = false
+margin_top = 54.0924
+margin_right = 1280.0
+margin_bottom = 764.092
+rect_scale = Vector2( 1.5, 1.5 )
 
 [connection signal="pressed" from="play_button" to="." method="_on_play_button_pressed"]
+[connection signal="pressed" from="level_select" to="." method="_on_level_select_pressed"]
 [connection signal="pressed" from="settings_button" to="." method="_on_config_button_pressed"]
 [connection signal="pressed" from="quit_button" to="." method="_on_quit_button_pressed"]
+[connection signal="pressed" from="HBoxContainer/BR_button" to="." method="_on_BR_button_pressed"]
+[connection signal="pressed" from="HBoxContainer/EN_button" to="." method="_on_EN_button_pressed"]

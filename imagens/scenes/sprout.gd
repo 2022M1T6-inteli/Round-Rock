@@ -5,7 +5,7 @@ onready var originalPosition = position #sets the original position to the posit
 var dataAttack = [
 	{"nome":"attack", "valor":20},
 	{"nome":"melee", "valor":10},
-	{"nome":"shield", "valor":25},
+	{"nome":"shield", "valor":15},
 ]#this is a list of dictionaries from which animations and damage are taken, this list is randomized on the line 34
 var move = false #motion variable
 var attack = false #attack variable
@@ -25,12 +25,14 @@ func _ready():
 	listAttack()
 	GlobalBattle.reset()
 	GlobalBattle.enemyName = "sprout"
-	
+
+#generate a random list of attacks	
 func listAttack():
 	for i in range(40):
 		animacao = randi() % dataAttack.size()
 		listAttack.append(dataAttack[animacao])
-	
+
+#iniciate attack
 func dataAttack():
 	if action:
 		animation = listAttack[0].nome
@@ -47,6 +49,7 @@ func dataAttack():
 		GlobalCards.drawCards = true
 		listAttack.pop_front()
 		
+#end round
 func _on_TextureButton_pressed():
 	if not GlobalBattle.cantClick: 
 		"""not GlobalCards.waitCardExtinguish and""" 
@@ -56,6 +59,7 @@ func _on_TextureButton_pressed():
 		dataAttack()
 		get_parent().get_node("enemyData").decreaseNextEnemyAttack()
 	
+#manage attack
 func actions():
 	if animation == "melee":
 		position.x -= 3.55
@@ -78,6 +82,7 @@ func actions():
 func run():
 	animation = "run"
 			
+#moveback to its's original position
 func moveBack():
 	if not death:
 		if moveBack:
@@ -91,24 +96,29 @@ func moveBack():
 				
 				GlobalBattle.cantClick = false
 				
+
 func increaseLife(value):
 	get_parent().get_node("enemyHealthBar").increaseLife(value)
 
 func decreaseLife():
 	get_parent().get_node("enemyHealthBar").decreaseLife(GlobalBattle.heroDamage)
 
+##intance range attack
 func branch():
 	yield(get_tree().create_timer(0.5), "timeout")
 	var branch = pre_branch.instance()
 	get_parent().add_child(branch)
 	#$arrow.play()
 	
+#dettect collision when attack
 func _on_hitBox_area_entered(area):
 	if position != originalPosition:
 		move = false
 		attack = true
 	pass # Replace with function body.
 	
+
+#dettect collision when damaged
 func _on_hurtBox_area_entered(area):
 	if position == originalPosition:
 		animation = "damage"
@@ -119,6 +129,8 @@ func _on_hurtBox_area_entered(area):
 		#$damage.play()
 		decreaseLife()
 
+
+#change state when animation finished
 func _on_sprout_animation_finished():
 	if not death and not moveBack:
 		if animation == "melee":

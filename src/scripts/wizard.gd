@@ -3,9 +3,9 @@ extends AnimatedSprite
 var pre_magicBall = preload("res://scenes/magicBall.tscn")#this function preloads the arrow scene will be used in arrow function
 onready var originalPosition = position #sets the original position to the position the enemy starts in the scene
 var dataAttack = [
-	{"nome":"attack", "valor":20},
-	{"nome":"melee", "valor":10},
-	{"nome":"shield", "valor":25},
+	{"nome":"attack", "valor":15},
+	{"nome":"melee", "valor":25},
+	{"nome":"shield", "valor":15},
 ]#this is a list of dictionaries from which animations and damage are taken, this list is randomized on the line 34
 var move = false #motion variable
 var attack = false #attack variable
@@ -27,12 +27,15 @@ func _ready():
 	listAttack()
 	GlobalBattle.reset()
 	GlobalBattle.enemyName = "wizard"
-	
+
+#generate a random list of attacks	
 func listAttack():
 	for i in range(40):
 		animacao = randi() % dataAttack.size()
 		listAttack.append(dataAttack[animacao])
 	
+#iniciate attack
+
 func dataAttack():
 	if action:
 		animation = listAttack[0].nome
@@ -49,13 +52,16 @@ func dataAttack():
 		GlobalCards.drawCards = true
 		listAttack.pop_front()
 		
+#manage attack
 func goAttack():
 	if moveFoward:
 		position.x -= 2.5
 		melee()
+
 	elif attack:
 		attack()
 		
+#end round
 func _on_TextureButton_pressed():
 	if not GlobalBattle.cantClick:
 		"""not GlobalCards.waitCardExtinguish and"""
@@ -64,7 +70,8 @@ func _on_TextureButton_pressed():
 		GlobalBattle.cantClick = true
 		dataAttack()
 		get_parent().get_node("enemyData").decreaseNextEnemyAttack()
-	
+
+#attack
 func actions():
 	if animation == "melee" and not attack:
 		moveFoward = true
@@ -84,6 +91,7 @@ func actions():
 				visible = false
 				queue_free()
 				
+#animations
 func attack():
 	animation = "attack1"
 func run():
@@ -91,7 +99,8 @@ func run():
 	
 func melee():
 	animation = "melee"
-	
+
+#moveback to its original position
 func moveBack():
 	if not death:
 		if moveBack:
@@ -109,11 +118,13 @@ func increaseLife(value):
 	get_parent().get_node("enemyHealthBar").increaseLife(value)
 func decreaseLife():
 	get_parent().get_node("enemyHealthBar").decreaseLife(GlobalBattle.heroDamage)
+
+#Instance range attack
 func magicBall():
 	var magicBall = pre_magicBall.instance()
 	get_parent().add_child(magicBall)
 	#$arrow.play()
-	
+
 func _on_hitBox_area_entered(area):
 	if position != originalPosition:
 		moveFoward = false

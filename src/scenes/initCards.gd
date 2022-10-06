@@ -2,7 +2,7 @@ extends Node2D
 
 onready var preCarta = preload("res://scenes/carta.tscn")
 
-var cartas = GlobalCards.cardDic
+var cartas = GlobalDeckBuilder.deckDictionary
 
 var deck = []
 
@@ -10,20 +10,21 @@ func _ready():
 	GlobalCards.reset()
 	GlobalBattle.catacombs = true
 	instanceCard()
-	showDeck(GlobalCards.nextCard, GlobalCards.untilCard)
+	#showDeck(GlobalCards.nextCard, GlobalCards.untilCard)
 	$trilhaSonora.play()
 
 #start the enemys turn
-func _physics_process(delta):
+func _physics_process(_delta):
 	drawCards()
 
 #this func add the cards on the screen, inside the scene
 func showDeck(start,end):
 	for i in range(start, end):
+		print(deck)
 		add_child(deck[i])
 	GlobalCards.nextCard = GlobalCards.untilCard
 
-
+#draw cards
 func drawCards():
 	if GlobalCards.drawCards and GlobalCards.nextCard < len(deck):
 		get_node("cardData").decreaseNextCards()
@@ -49,19 +50,21 @@ func instanceCard():
 	for card in cartas:
 		deck.append(card(card))
 	
-	shuffle()
+	#shuffle()
 	var x = 200
 	var y = 500
 	for i in range(0,7):
 		deck[i].position = Vector2(x,y)
 		x += 100
-
+	
+	print(deck)
 #func to instance a new card
 func card(cardInfo):
 	var carta = preCarta.instance()
 	carta.scale = Vector2(0.5,0.5)
 	carta.get_node("background").texture = load("res://assets/cartas/background/"+cardInfo["type"]+"Background.png")
-	#carta.get_node("image").texture = load("res://assets/cartas/images/"+cardInfo["testImage"]+".png")
+	carta.get_node("background").texture = load("res://assets/cartas/background/"+cardInfo["type"]+"Background.png")
+	carta.get_node("image").texture = load("res://DeckBuilder/Assets/newCardBackgrounds/"+cardInfo["name"]+".png")
 	carta.get_node("custo").texture = load("res://assets/cartas/custo/custo"+str(cardInfo["cost"])+".png")
 	carta.get_node("name").text = cardInfo["name"]
 	carta.get_node("description").text = cardInfo["description"]
@@ -85,7 +88,7 @@ func card(cardInfo):
 	
 	return carta
 
-
+#shuffle deck
 func shuffle():
 	randomize()
 	deck.shuffle()

@@ -1,0 +1,951 @@
+[gd_scene load_steps=167 format=2]
+
+[ext_resource path="res://assets/Wizard Pack/Idle.png" type="Texture" id=1]
+[ext_resource path="res://assets/ghost-enemy/king Sprite.png" type="Texture" id=2]
+[ext_resource path="res://assets/sprout/Sprout_idle.png" type="Texture" id=3]
+[ext_resource path="res://assets/skeleton/skeleton_seeker_idle.png" type="Texture" id=4]
+[ext_resource path="res://assets/olho/olho_idle.png" type="Texture" id=5]
+[ext_resource path="res://assets/archer/spr_ArcherIdle_strip_NoBkg.png" type="Texture" id=6]
+[ext_resource path="res://assets/gelatto/idle/idle_3.png" type="Texture" id=7]
+[ext_resource path="res://assets/gelatto/idle/idle_5.png" type="Texture" id=8]
+[ext_resource path="res://assets/gelatto/idle/idle_2.png" type="Texture" id=9]
+[ext_resource path="res://assets/gelatto/idle/idle_1.png" type="Texture" id=10]
+[ext_resource path="res://assets/gelatto/idle/idle_6.png" type="Texture" id=11]
+[ext_resource path="res://assets/gelatto/idle/idle_4.png" type="Texture" id=12]
+[ext_resource path="res://assets/demon/individual sprites/01_demon_idle/demon_idle_2.png" type="Texture" id=13]
+[ext_resource path="res://assets/demon/individual sprites/01_demon_idle/demon_idle_1.png" type="Texture" id=14]
+[ext_resource path="res://assets/demon/individual sprites/01_demon_idle/demon_idle_3.png" type="Texture" id=15]
+[ext_resource path="res://assets/demon/individual sprites/01_demon_idle/demon_idle_4.png" type="Texture" id=16]
+[ext_resource path="res://assets/demon/individual sprites/01_demon_idle/demon_idle_5.png" type="Texture" id=17]
+[ext_resource path="res://assets/demon/individual sprites/01_demon_idle/demon_idle_6.png" type="Texture" id=18]
+[ext_resource path="res://assets/borderButtons/play-LevelSelect.png" type="Texture" id=19]
+[ext_resource path="res://assets/background/contour.png" type="Texture" id=20]
+[ext_resource path="res://assets/background/middleground.png" type="Texture" id=21]
+[ext_resource path="res://assets/borderButtons/back button.png" type="Texture" id=22]
+[ext_resource path="res://scripts/LevelSelect.gd" type="Script" id=23]
+[ext_resource path="res://assets/sounds/wood-hard-hit.mp3" type="AudioStream" id=24]
+[ext_resource path="res://assets/sounds/select-sound.mp3" type="AudioStream" id=25]
+[ext_resource path="res://assets/bringer/Bringer-of-Death-SpritSheet.png" type="Texture" id=26]
+
+[sub_resource type="AtlasTexture" id=1]
+atlas = ExtResource( 2 )
+region = Rect2( 0, 0, 160, 111 )
+
+[sub_resource type="AtlasTexture" id=2]
+atlas = ExtResource( 2 )
+region = Rect2( 160, 0, 160, 111 )
+
+[sub_resource type="AtlasTexture" id=3]
+atlas = ExtResource( 2 )
+region = Rect2( 320, 0, 160, 111 )
+
+[sub_resource type="AtlasTexture" id=4]
+atlas = ExtResource( 2 )
+region = Rect2( 480, 0, 160, 111 )
+
+[sub_resource type="AtlasTexture" id=5]
+atlas = ExtResource( 2 )
+region = Rect2( 640, 0, 160, 111 )
+
+[sub_resource type="AtlasTexture" id=6]
+atlas = ExtResource( 2 )
+region = Rect2( 800, 0, 160, 111 )
+
+[sub_resource type="AtlasTexture" id=7]
+atlas = ExtResource( 2 )
+region = Rect2( 960, 0, 160, 111 )
+
+[sub_resource type="AtlasTexture" id=8]
+atlas = ExtResource( 2 )
+region = Rect2( 1120, 0, 160, 111 )
+
+[sub_resource type="AtlasTexture" id=9]
+atlas = ExtResource( 2 )
+region = Rect2( 1280, 0, 160, 111 )
+
+[sub_resource type="AtlasTexture" id=10]
+atlas = ExtResource( 2 )
+region = Rect2( 1440, 0, 160, 111 )
+
+[sub_resource type="AtlasTexture" id=11]
+atlas = ExtResource( 2 )
+region = Rect2( 1600, 0, 160, 111 )
+
+[sub_resource type="AtlasTexture" id=12]
+atlas = ExtResource( 2 )
+region = Rect2( 1760, 0, 160, 111 )
+
+[sub_resource type="AtlasTexture" id=13]
+atlas = ExtResource( 2 )
+region = Rect2( 1920, 0, 160, 111 )
+
+[sub_resource type="AtlasTexture" id=14]
+atlas = ExtResource( 2 )
+region = Rect2( 2080, 0, 160, 111 )
+
+[sub_resource type="AtlasTexture" id=15]
+atlas = ExtResource( 2 )
+region = Rect2( 2240, 0, 160, 111 )
+
+[sub_resource type="AtlasTexture" id=16]
+atlas = ExtResource( 2 )
+region = Rect2( 2400, 0, 160, 111 )
+
+[sub_resource type="AtlasTexture" id=17]
+atlas = ExtResource( 2 )
+region = Rect2( 2560, 0, 160, 111 )
+
+[sub_resource type="AtlasTexture" id=18]
+atlas = ExtResource( 2 )
+region = Rect2( 2720, 0, 160, 111 )
+
+[sub_resource type="AtlasTexture" id=19]
+atlas = ExtResource( 2 )
+region = Rect2( 2880, 0, 160, 111 )
+
+[sub_resource type="AtlasTexture" id=20]
+atlas = ExtResource( 2 )
+region = Rect2( 3040, 0, 160, 111 )
+
+[sub_resource type="SpriteFrames" id=21]
+animations = [ {
+"frames": [ SubResource( 1 ), SubResource( 2 ), SubResource( 3 ), SubResource( 4 ), SubResource( 5 ), SubResource( 6 ), SubResource( 7 ), SubResource( 8 ), SubResource( 9 ), SubResource( 10 ), SubResource( 11 ), SubResource( 12 ), SubResource( 13 ), SubResource( 14 ), SubResource( 15 ), SubResource( 16 ), SubResource( 17 ), SubResource( 18 ), SubResource( 19 ), SubResource( 20 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[sub_resource type="AtlasTexture" id=22]
+atlas = ExtResource( 3 )
+region = Rect2( 0, 0, 96, 96 )
+
+[sub_resource type="AtlasTexture" id=23]
+atlas = ExtResource( 3 )
+region = Rect2( 0, 96, 96, 96 )
+
+[sub_resource type="AtlasTexture" id=24]
+atlas = ExtResource( 3 )
+region = Rect2( 0, 192, 96, 96 )
+
+[sub_resource type="AtlasTexture" id=25]
+atlas = ExtResource( 3 )
+region = Rect2( 0, 288, 96, 96 )
+
+[sub_resource type="SpriteFrames" id=26]
+animations = [ {
+"frames": [ SubResource( 22 ), SubResource( 23 ), SubResource( 24 ), SubResource( 25 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[sub_resource type="SpriteFrames" id=27]
+animations = [ {
+"frames": [ ExtResource( 10 ), ExtResource( 9 ), ExtResource( 7 ), ExtResource( 12 ), ExtResource( 8 ), ExtResource( 11 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[sub_resource type="AtlasTexture" id=28]
+atlas = ExtResource( 4 )
+region = Rect2( 0, 0, 120, 120 )
+
+[sub_resource type="AtlasTexture" id=29]
+atlas = ExtResource( 4 )
+region = Rect2( 0, 120, 120, 120 )
+
+[sub_resource type="AtlasTexture" id=30]
+atlas = ExtResource( 4 )
+region = Rect2( 0, 240, 120, 120 )
+
+[sub_resource type="AtlasTexture" id=31]
+atlas = ExtResource( 4 )
+region = Rect2( 0, 360, 120, 120 )
+
+[sub_resource type="AtlasTexture" id=32]
+atlas = ExtResource( 4 )
+region = Rect2( 0, 480, 120, 120 )
+
+[sub_resource type="AtlasTexture" id=33]
+atlas = ExtResource( 4 )
+region = Rect2( 0, 600, 120, 120 )
+
+[sub_resource type="SpriteFrames" id=34]
+animations = [ {
+"frames": [ SubResource( 28 ), SubResource( 29 ), SubResource( 30 ), SubResource( 31 ), SubResource( 32 ), SubResource( 33 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[sub_resource type="AtlasTexture" id=93]
+atlas = ExtResource( 26 )
+region = Rect2( 0, 0, 140, 93 )
+
+[sub_resource type="AtlasTexture" id=94]
+atlas = ExtResource( 26 )
+region = Rect2( 140, 0, 140, 93 )
+
+[sub_resource type="AtlasTexture" id=95]
+atlas = ExtResource( 26 )
+region = Rect2( 280, 0, 140, 93 )
+
+[sub_resource type="AtlasTexture" id=96]
+atlas = ExtResource( 26 )
+region = Rect2( 420, 0, 140, 93 )
+
+[sub_resource type="AtlasTexture" id=97]
+atlas = ExtResource( 26 )
+region = Rect2( 560, 0, 140, 93 )
+
+[sub_resource type="AtlasTexture" id=98]
+atlas = ExtResource( 26 )
+region = Rect2( 700, 0, 140, 93 )
+
+[sub_resource type="AtlasTexture" id=99]
+atlas = ExtResource( 26 )
+region = Rect2( 840, 0, 140, 93 )
+
+[sub_resource type="AtlasTexture" id=100]
+atlas = ExtResource( 26 )
+region = Rect2( 980, 0, 140, 93 )
+
+[sub_resource type="AtlasTexture" id=101]
+atlas = ExtResource( 26 )
+region = Rect2( 0, 93, 140, 93 )
+
+[sub_resource type="AtlasTexture" id=102]
+atlas = ExtResource( 26 )
+region = Rect2( 140, 93, 140, 93 )
+
+[sub_resource type="AtlasTexture" id=103]
+atlas = ExtResource( 26 )
+region = Rect2( 280, 93, 140, 93 )
+
+[sub_resource type="AtlasTexture" id=104]
+atlas = ExtResource( 26 )
+region = Rect2( 420, 93, 140, 93 )
+
+[sub_resource type="AtlasTexture" id=105]
+atlas = ExtResource( 26 )
+region = Rect2( 560, 93, 140, 93 )
+
+[sub_resource type="AtlasTexture" id=106]
+atlas = ExtResource( 26 )
+region = Rect2( 700, 93, 140, 93 )
+
+[sub_resource type="AtlasTexture" id=107]
+atlas = ExtResource( 26 )
+region = Rect2( 840, 93, 140, 93 )
+
+[sub_resource type="AtlasTexture" id=108]
+atlas = ExtResource( 26 )
+region = Rect2( 980, 93, 140, 93 )
+
+[sub_resource type="AtlasTexture" id=109]
+atlas = ExtResource( 26 )
+region = Rect2( 0, 186, 140, 93 )
+
+[sub_resource type="AtlasTexture" id=110]
+atlas = ExtResource( 26 )
+region = Rect2( 140, 186, 140, 93 )
+
+[sub_resource type="AtlasTexture" id=111]
+atlas = ExtResource( 26 )
+region = Rect2( 280, 186, 140, 93 )
+
+[sub_resource type="AtlasTexture" id=112]
+atlas = ExtResource( 26 )
+region = Rect2( 420, 186, 140, 93 )
+
+[sub_resource type="AtlasTexture" id=113]
+atlas = ExtResource( 26 )
+region = Rect2( 560, 186, 140, 93 )
+
+[sub_resource type="AtlasTexture" id=114]
+atlas = ExtResource( 26 )
+region = Rect2( 700, 186, 140, 93 )
+
+[sub_resource type="AtlasTexture" id=115]
+atlas = ExtResource( 26 )
+region = Rect2( 840, 186, 140, 93 )
+
+[sub_resource type="AtlasTexture" id=116]
+atlas = ExtResource( 26 )
+region = Rect2( 980, 186, 140, 93 )
+
+[sub_resource type="AtlasTexture" id=117]
+atlas = ExtResource( 26 )
+region = Rect2( 0, 279, 140, 93 )
+
+[sub_resource type="AtlasTexture" id=118]
+atlas = ExtResource( 26 )
+region = Rect2( 140, 279, 140, 93 )
+
+[sub_resource type="AtlasTexture" id=119]
+atlas = ExtResource( 26 )
+region = Rect2( 280, 279, 140, 93 )
+
+[sub_resource type="AtlasTexture" id=120]
+atlas = ExtResource( 26 )
+region = Rect2( 420, 279, 140, 93 )
+
+[sub_resource type="AtlasTexture" id=121]
+atlas = ExtResource( 26 )
+region = Rect2( 560, 279, 140, 93 )
+
+[sub_resource type="AtlasTexture" id=122]
+atlas = ExtResource( 26 )
+region = Rect2( 700, 279, 140, 93 )
+
+[sub_resource type="AtlasTexture" id=123]
+atlas = ExtResource( 26 )
+region = Rect2( 840, 279, 140, 93 )
+
+[sub_resource type="AtlasTexture" id=124]
+atlas = ExtResource( 26 )
+region = Rect2( 980, 279, 140, 93 )
+
+[sub_resource type="AtlasTexture" id=125]
+atlas = ExtResource( 26 )
+region = Rect2( 0, 372, 140, 93 )
+
+[sub_resource type="AtlasTexture" id=126]
+atlas = ExtResource( 26 )
+region = Rect2( 140, 372, 140, 93 )
+
+[sub_resource type="AtlasTexture" id=127]
+atlas = ExtResource( 26 )
+region = Rect2( 280, 372, 140, 93 )
+
+[sub_resource type="AtlasTexture" id=128]
+atlas = ExtResource( 26 )
+region = Rect2( 420, 372, 140, 93 )
+
+[sub_resource type="AtlasTexture" id=129]
+atlas = ExtResource( 26 )
+region = Rect2( 560, 372, 140, 93 )
+
+[sub_resource type="AtlasTexture" id=130]
+atlas = ExtResource( 26 )
+region = Rect2( 700, 372, 140, 93 )
+
+[sub_resource type="AtlasTexture" id=131]
+atlas = ExtResource( 26 )
+region = Rect2( 840, 372, 140, 93 )
+
+[sub_resource type="AtlasTexture" id=132]
+atlas = ExtResource( 26 )
+region = Rect2( 980, 372, 140, 93 )
+
+[sub_resource type="AtlasTexture" id=133]
+atlas = ExtResource( 26 )
+region = Rect2( 0, 465, 140, 93 )
+
+[sub_resource type="AtlasTexture" id=134]
+atlas = ExtResource( 26 )
+region = Rect2( 140, 465, 140, 93 )
+
+[sub_resource type="AtlasTexture" id=135]
+atlas = ExtResource( 26 )
+region = Rect2( 280, 465, 140, 93 )
+
+[sub_resource type="AtlasTexture" id=136]
+atlas = ExtResource( 26 )
+region = Rect2( 420, 465, 140, 93 )
+
+[sub_resource type="AtlasTexture" id=137]
+atlas = ExtResource( 26 )
+region = Rect2( 560, 465, 140, 93 )
+
+[sub_resource type="AtlasTexture" id=138]
+atlas = ExtResource( 26 )
+region = Rect2( 700, 465, 140, 93 )
+
+[sub_resource type="AtlasTexture" id=139]
+atlas = ExtResource( 26 )
+region = Rect2( 840, 465, 140, 93 )
+
+[sub_resource type="AtlasTexture" id=140]
+atlas = ExtResource( 26 )
+region = Rect2( 980, 465, 140, 93 )
+
+[sub_resource type="AtlasTexture" id=141]
+atlas = ExtResource( 26 )
+region = Rect2( 0, 558, 140, 93 )
+
+[sub_resource type="AtlasTexture" id=142]
+atlas = ExtResource( 26 )
+region = Rect2( 140, 558, 140, 93 )
+
+[sub_resource type="AtlasTexture" id=143]
+atlas = ExtResource( 26 )
+region = Rect2( 280, 558, 140, 93 )
+
+[sub_resource type="AtlasTexture" id=144]
+atlas = ExtResource( 26 )
+region = Rect2( 420, 558, 140, 93 )
+
+[sub_resource type="AtlasTexture" id=145]
+atlas = ExtResource( 26 )
+region = Rect2( 560, 558, 140, 93 )
+
+[sub_resource type="AtlasTexture" id=146]
+atlas = ExtResource( 26 )
+region = Rect2( 700, 558, 140, 93 )
+
+[sub_resource type="AtlasTexture" id=147]
+atlas = ExtResource( 26 )
+region = Rect2( 840, 558, 140, 93 )
+
+[sub_resource type="AtlasTexture" id=148]
+atlas = ExtResource( 26 )
+region = Rect2( 980, 558, 140, 93 )
+
+[sub_resource type="AtlasTexture" id=149]
+atlas = ExtResource( 26 )
+region = Rect2( 0, 651, 140, 93 )
+
+[sub_resource type="AtlasTexture" id=150]
+atlas = ExtResource( 26 )
+region = Rect2( 140, 651, 140, 93 )
+
+[sub_resource type="AtlasTexture" id=151]
+atlas = ExtResource( 26 )
+region = Rect2( 280, 651, 140, 93 )
+
+[sub_resource type="AtlasTexture" id=152]
+atlas = ExtResource( 26 )
+region = Rect2( 420, 651, 140, 93 )
+
+[sub_resource type="AtlasTexture" id=153]
+atlas = ExtResource( 26 )
+region = Rect2( 560, 651, 140, 93 )
+
+[sub_resource type="AtlasTexture" id=154]
+atlas = ExtResource( 26 )
+region = Rect2( 700, 651, 140, 93 )
+
+[sub_resource type="AtlasTexture" id=155]
+atlas = ExtResource( 26 )
+region = Rect2( 840, 651, 140, 93 )
+
+[sub_resource type="AtlasTexture" id=156]
+atlas = ExtResource( 26 )
+region = Rect2( 980, 651, 140, 93 )
+
+[sub_resource type="SpriteFrames" id=92]
+animations = [ {
+"frames": [ SubResource( 93 ), SubResource( 94 ), SubResource( 95 ), SubResource( 96 ), SubResource( 97 ), SubResource( 98 ), SubResource( 99 ), SubResource( 100 ), SubResource( 101 ), SubResource( 102 ), SubResource( 103 ), SubResource( 104 ), SubResource( 105 ), SubResource( 106 ), SubResource( 107 ), SubResource( 108 ), SubResource( 109 ), SubResource( 110 ), SubResource( 111 ), SubResource( 112 ), SubResource( 113 ), SubResource( 114 ), SubResource( 115 ), SubResource( 116 ), SubResource( 117 ), SubResource( 118 ), SubResource( 119 ), SubResource( 120 ), SubResource( 121 ), SubResource( 122 ), SubResource( 123 ), SubResource( 124 ), SubResource( 125 ), SubResource( 126 ), SubResource( 127 ), SubResource( 128 ), SubResource( 129 ), SubResource( 130 ), SubResource( 131 ), SubResource( 132 ), SubResource( 133 ), SubResource( 134 ), SubResource( 135 ), SubResource( 136 ), SubResource( 137 ), SubResource( 138 ), SubResource( 139 ), SubResource( 140 ), SubResource( 141 ), SubResource( 142 ), SubResource( 143 ), SubResource( 144 ), SubResource( 145 ), SubResource( 146 ), SubResource( 147 ), SubResource( 148 ), SubResource( 149 ), SubResource( 150 ), SubResource( 151 ), SubResource( 152 ), SubResource( 153 ), SubResource( 154 ), SubResource( 155 ), SubResource( 156 ) ],
+"loop": true,
+"name": "New Anim",
+"speed": 7.0
+} ]
+
+[sub_resource type="AtlasTexture" id=35]
+atlas = ExtResource( 6 )
+region = Rect2( 0, 0, 128, 128 )
+
+[sub_resource type="AtlasTexture" id=36]
+atlas = ExtResource( 6 )
+region = Rect2( 128, 0, 128, 128 )
+
+[sub_resource type="AtlasTexture" id=37]
+atlas = ExtResource( 6 )
+region = Rect2( 256, 0, 128, 128 )
+
+[sub_resource type="AtlasTexture" id=38]
+atlas = ExtResource( 6 )
+region = Rect2( 384, 0, 128, 128 )
+
+[sub_resource type="AtlasTexture" id=39]
+atlas = ExtResource( 6 )
+region = Rect2( 512, 0, 128, 128 )
+
+[sub_resource type="AtlasTexture" id=40]
+atlas = ExtResource( 6 )
+region = Rect2( 640, 0, 128, 128 )
+
+[sub_resource type="AtlasTexture" id=41]
+atlas = ExtResource( 6 )
+region = Rect2( 768, 0, 128, 128 )
+
+[sub_resource type="AtlasTexture" id=42]
+atlas = ExtResource( 6 )
+region = Rect2( 896, 0, 128, 128 )
+
+[sub_resource type="SpriteFrames" id=43]
+animations = [ {
+"frames": [ SubResource( 35 ), SubResource( 36 ), SubResource( 37 ), SubResource( 38 ), SubResource( 39 ), SubResource( 40 ), SubResource( 41 ), SubResource( 42 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[sub_resource type="AtlasTexture" id=44]
+atlas = ExtResource( 5 )
+region = Rect2( 0, 0, 100, 100 )
+
+[sub_resource type="AtlasTexture" id=45]
+atlas = ExtResource( 5 )
+region = Rect2( 100, 0, 100, 100 )
+
+[sub_resource type="AtlasTexture" id=46]
+atlas = ExtResource( 5 )
+region = Rect2( 200, 0, 100, 100 )
+
+[sub_resource type="AtlasTexture" id=47]
+atlas = ExtResource( 5 )
+region = Rect2( 300, 0, 100, 100 )
+
+[sub_resource type="AtlasTexture" id=48]
+atlas = ExtResource( 5 )
+region = Rect2( 400, 0, 100, 100 )
+
+[sub_resource type="AtlasTexture" id=49]
+atlas = ExtResource( 5 )
+region = Rect2( 500, 0, 100, 100 )
+
+[sub_resource type="AtlasTexture" id=50]
+atlas = ExtResource( 5 )
+region = Rect2( 600, 0, 100, 100 )
+
+[sub_resource type="AtlasTexture" id=51]
+atlas = ExtResource( 5 )
+region = Rect2( 700, 0, 100, 100 )
+
+[sub_resource type="AtlasTexture" id=52]
+atlas = ExtResource( 5 )
+region = Rect2( 800, 0, 100, 100 )
+
+[sub_resource type="AtlasTexture" id=53]
+atlas = ExtResource( 5 )
+region = Rect2( 900, 0, 100, 100 )
+
+[sub_resource type="AtlasTexture" id=54]
+atlas = ExtResource( 5 )
+region = Rect2( 1000, 0, 100, 100 )
+
+[sub_resource type="AtlasTexture" id=55]
+atlas = ExtResource( 5 )
+region = Rect2( 1100, 0, 100, 100 )
+
+[sub_resource type="AtlasTexture" id=56]
+atlas = ExtResource( 5 )
+region = Rect2( 1200, 0, 100, 100 )
+
+[sub_resource type="AtlasTexture" id=57]
+atlas = ExtResource( 5 )
+region = Rect2( 1300, 0, 100, 100 )
+
+[sub_resource type="AtlasTexture" id=58]
+atlas = ExtResource( 5 )
+region = Rect2( 1400, 0, 100, 100 )
+
+[sub_resource type="AtlasTexture" id=59]
+atlas = ExtResource( 5 )
+region = Rect2( 1500, 0, 100, 100 )
+
+[sub_resource type="SpriteFrames" id=60]
+animations = [ {
+"frames": [ SubResource( 44 ), SubResource( 45 ), SubResource( 46 ), SubResource( 47 ), SubResource( 48 ), SubResource( 49 ), SubResource( 50 ), SubResource( 51 ), SubResource( 52 ), SubResource( 53 ), SubResource( 54 ), SubResource( 55 ), SubResource( 56 ), SubResource( 57 ), SubResource( 58 ), SubResource( 59 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[sub_resource type="SpriteFrames" id=61]
+animations = [ {
+"frames": [ ExtResource( 14 ), ExtResource( 13 ), ExtResource( 15 ), ExtResource( 16 ), ExtResource( 17 ), ExtResource( 18 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[sub_resource type="AtlasTexture" id=62]
+atlas = ExtResource( 1 )
+region = Rect2( 0, 0, 231, 190 )
+
+[sub_resource type="AtlasTexture" id=63]
+atlas = ExtResource( 1 )
+region = Rect2( 231, 0, 231, 190 )
+
+[sub_resource type="AtlasTexture" id=64]
+atlas = ExtResource( 1 )
+region = Rect2( 462, 0, 231, 190 )
+
+[sub_resource type="AtlasTexture" id=65]
+atlas = ExtResource( 1 )
+region = Rect2( 693, 0, 231, 190 )
+
+[sub_resource type="AtlasTexture" id=66]
+atlas = ExtResource( 1 )
+region = Rect2( 924, 0, 231, 190 )
+
+[sub_resource type="AtlasTexture" id=67]
+atlas = ExtResource( 1 )
+region = Rect2( 1155, 0, 231, 190 )
+
+[sub_resource type="AtlasTexture" id=70]
+atlas = ExtResource( 1 )
+region = Rect2( 0, 0, 231, 190 )
+
+[sub_resource type="AtlasTexture" id=71]
+atlas = ExtResource( 1 )
+region = Rect2( 231, 0, 231, 190 )
+
+[sub_resource type="AtlasTexture" id=72]
+atlas = ExtResource( 1 )
+region = Rect2( 462, 0, 231, 190 )
+
+[sub_resource type="AtlasTexture" id=73]
+atlas = ExtResource( 1 )
+region = Rect2( 693, 0, 231, 190 )
+
+[sub_resource type="AtlasTexture" id=74]
+atlas = ExtResource( 1 )
+region = Rect2( 924, 0, 231, 190 )
+
+[sub_resource type="AtlasTexture" id=75]
+atlas = ExtResource( 1 )
+region = Rect2( 1155, 0, 231, 190 )
+
+[sub_resource type="SpriteFrames" id=68]
+animations = [ {
+"frames": [ SubResource( 62 ), SubResource( 63 ), SubResource( 64 ), SubResource( 65 ), SubResource( 66 ), SubResource( 67 ), SubResource( 70 ), SubResource( 71 ), SubResource( 72 ), SubResource( 73 ), SubResource( 74 ), SubResource( 75 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[sub_resource type="TileSet" id=157]
+0/name = "contour.png 0"
+0/texture = ExtResource( 20 )
+0/tex_offset = Vector2( 0, 0 )
+0/modulate = Color( 1, 1, 1, 1 )
+0/region = Rect2( 0, 16, 48, 144 )
+0/tile_mode = 0
+0/occluder_offset = Vector2( 0, 0 )
+0/navigation_offset = Vector2( 0, 0 )
+0/shape_offset = Vector2( 0, 0 )
+0/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+0/shape_one_way = false
+0/shape_one_way_margin = 0.0
+0/shapes = [  ]
+0/z_index = 0
+
+[node name="Control" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 23 )
+
+[node name="backButton" type="TextureButton" parent="."]
+margin_left = 16.0
+margin_top = 16.0
+margin_right = 544.0
+margin_bottom = 547.0
+rect_scale = Vector2( 0.11, 0.11 )
+texture_normal = ExtResource( 22 )
+
+[node name="TextureRect" type="Sprite" parent="."]
+position = Vector2( 517, 303 )
+scale = Vector2( 2.65, 2.07 )
+z_index = -1
+texture = ExtResource( 21 )
+
+[node name="GoToMotherLand" type="TextureButton" parent="."]
+margin_left = 72.0
+margin_top = 48.0
+margin_right = 622.0
+margin_bottom = 410.0
+rect_scale = Vector2( 0.4, 0.4 )
+texture_hover = ExtResource( 19 )
+stretch_mode = 4
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="RichTextLabel" type="RichTextLabel" parent="GoToMotherLand"]
+margin_left = 185.0
+margin_top = 287.5
+margin_right = 265.0
+margin_bottom = 302.5
+rect_scale = Vector2( 4, 4 )
+text = "MotherLand"
+fit_content_height = true
+
+[node name="King" type="AnimatedSprite" parent="GoToMotherLand"]
+position = Vector2( 347.5, 172.5 )
+scale = Vector2( 2, 2 )
+z_index = -1
+frames = SubResource( 21 )
+frame = 12
+playing = true
+
+[node name="GoToDarkLightForest" type="TextureButton" parent="."]
+margin_left = 416.0
+margin_top = 48.0
+margin_right = 966.0
+margin_bottom = 456.0
+rect_scale = Vector2( 0.4, 0.4 )
+texture_hover = ExtResource( 19 )
+stretch_mode = 4
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="RichTextLabel" type="RichTextLabel" parent="GoToDarkLightForest"]
+margin_left = 102.5
+margin_top = 287.5
+margin_right = 206.5
+margin_bottom = 299.5
+rect_scale = Vector2( 4, 4 )
+text = "DarkLight Forest"
+scroll_active = false
+
+[node name="Sprout" type="AnimatedSprite" parent="GoToDarkLightForest"]
+position = Vector2( 332.5, 212.5 )
+scale = Vector2( 2, 2 )
+z_index = -1
+frames = SubResource( 26 )
+frame = 2
+playing = true
+
+[node name="GoToCatacombsOfAnihilation" type="TextureButton" parent="."]
+margin_left = 712.0
+margin_top = 48.0
+margin_right = 1121.0
+margin_bottom = 456.0
+rect_scale = Vector2( 0.4, 0.4 )
+texture_hover = ExtResource( 19 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="RichTextLabel" type="RichTextLabel" parent="GoToCatacombsOfAnihilation"]
+anchor_right = 0.25
+margin_left = 127.5
+margin_top = 297.5
+margin_right = 162.25
+margin_bottom = 327.5
+rect_scale = Vector2( 3.2, 3.2 )
+text = "Catacombs of annihilation"
+fit_content_height = true
+scroll_active = false
+
+[node name="Gellato" type="AnimatedSprite" parent="GoToCatacombsOfAnihilation"]
+position = Vector2( 380, 215 )
+scale = Vector2( 1.4, 1.4 )
+z_index = -1
+frames = SubResource( 27 )
+frame = 5
+playing = true
+
+[node name="GoToUnholyCemetery" type="TextureButton" parent="."]
+margin_left = 72.0
+margin_top = 240.0
+margin_right = 621.0
+margin_bottom = 648.0
+rect_scale = Vector2( 0.4, 0.4 )
+texture_hover = ExtResource( 19 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="RichTextLabel" type="RichTextLabel" parent="GoToUnholyCemetery"]
+margin_left = 125.0
+margin_top = 316.0
+margin_right = 241.0
+margin_bottom = 328.0
+rect_scale = Vector2( 4, 4 )
+text = "Unholy Cemetery "
+scroll_active = false
+
+[node name="Skeleton" type="AnimatedSprite" parent="GoToUnholyCemetery"]
+position = Vector2( 357.5, 202.5 )
+scale = Vector2( 1.6, 1.6 )
+z_index = -1
+frames = SubResource( 34 )
+frame = 5
+
+[node name="GoToChurchOfTheDamned" type="TextureButton" parent="."]
+margin_left = 416.0
+margin_top = 240.0
+margin_right = 965.0
+margin_bottom = 648.0
+rect_scale = Vector2( 0.4, 0.4 )
+texture_hover = ExtResource( 19 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="RichTextLabel" type="RichTextLabel" parent="GoToChurchOfTheDamned"]
+anchor_right = 0.009
+margin_left = 62.5
+margin_top = 316.0
+margin_right = 200.5
+margin_bottom = 328.0
+rect_scale = Vector2( 4, 4 )
+text = "Church of the damned"
+scroll_active = false
+
+[node name="Bringer" type="AnimatedSprite" parent="GoToChurchOfTheDamned"]
+position = Vector2( 302.5, 207.5 )
+scale = Vector2( 2, 2 )
+z_index = -1
+frames = SubResource( 92 )
+animation = "New Anim"
+frame = 38
+playing = true
+
+[node name="GoToFortOfIllusion" type="TextureButton" parent="."]
+margin_left = 712.0
+margin_top = 240.0
+margin_right = 1121.0
+margin_bottom = 648.0
+rect_scale = Vector2( 0.4, 0.4 )
+texture_hover = ExtResource( 19 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="RichTextLabel" type="RichTextLabel" parent="GoToFortOfIllusion"]
+margin_left = 202.5
+margin_top = 316.0
+margin_right = 296.5
+margin_bottom = 328.0
+rect_scale = Vector2( 4, 4 )
+text = "Fort of illusion"
+scroll_active = false
+
+[node name="Archer" type="AnimatedSprite" parent="GoToFortOfIllusion"]
+position = Vector2( 390, 230 )
+scale = Vector2( 2.6, 2.6 )
+z_index = -1
+frames = SubResource( 43 )
+frame = 3
+playing = true
+
+[node name="GoToHallsOfStone" type="TextureButton" parent="."]
+margin_left = 72.0
+margin_top = 416.0
+margin_right = 621.0
+margin_bottom = 824.0
+rect_scale = Vector2( 0.4, 0.4 )
+texture_hover = ExtResource( 19 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="RichTextLabel" type="RichTextLabel" parent="GoToHallsOfStone"]
+margin_left = 200.0
+margin_top = 275.0
+margin_right = 288.0
+margin_bottom = 287.0
+rect_scale = Vector2( 4, 4 )
+text = "Halls of Stone"
+scroll_active = false
+
+[node name="DukeStone" type="AnimatedSprite" parent="GoToHallsOfStone"]
+position = Vector2( 370, 197.5 )
+scale = Vector2( 2, 2 )
+z_index = -1
+z_as_relative = false
+frames = SubResource( 60 )
+frame = 5
+playing = true
+
+[node name="GoToHomeLand" type="TextureButton" parent="."]
+margin_left = 416.0
+margin_top = 416.0
+margin_right = 965.0
+margin_bottom = 824.0
+rect_scale = Vector2( 0.4, 0.4 )
+texture_hover = ExtResource( 19 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="RichTextLabel" type="RichTextLabel" parent="GoToHomeLand"]
+margin_left = 230.0
+margin_top = 275.0
+margin_right = 299.0
+margin_bottom = 287.0
+rect_scale = Vector2( 4, 4 )
+text = "HomeLand"
+scroll_active = false
+
+[node name="Demon" type="AnimatedSprite" parent="GoToHomeLand"]
+position = Vector2( 372.5, 155 )
+scale = Vector2( 1.4, 1.4 )
+z_index = -1
+frames = SubResource( 61 )
+frame = 3
+playing = true
+
+[node name="GoToFinal" type="TextureButton" parent="."]
+margin_left = 712.0
+margin_top = 416.0
+margin_right = 1121.0
+margin_bottom = 824.0
+rect_scale = Vector2( 0.4, 0.4 )
+texture_hover = ExtResource( 19 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="RichTextLabel" type="RichTextLabel" parent="GoToFinal"]
+margin_left = 300.0
+margin_top = 275.0
+margin_right = 332.0
+margin_bottom = 287.0
+rect_scale = Vector2( 4, 4 )
+text = "Final"
+scroll_active = false
+
+[node name="Wizard" type="AnimatedSprite" parent="GoToFinal"]
+position = Vector2( 380, 190 )
+scale = Vector2( 1.4, 1.4 )
+z_index = -1
+frames = SubResource( 68 )
+frame = 1
+playing = true
+
+[node name="ButtonSound" type="AudioStreamPlayer2D" parent="."]
+position = Vector2( 16, 16 )
+scale = Vector2( 0.11, 0.11 )
+stream = ExtResource( 24 )
+bus = "Effects"
+
+[node name="SelectSound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 25 )
+bus = "Effects"
+
+[node name="Border" type="TileMap" parent="."]
+position = Vector2( 10, -16 )
+scale = Vector2( 0.524, 0.55 )
+tile_set = SubResource( 157 )
+cell_size = Vector2( 16, 16 )
+format = 1
+tile_data = PoolIntArray( 131070, -1610612736, 0, 65541, -1610612736, 0, 65549, -1610612736, 0, 65558, -2147483648, 0, 65565, -1610612736, 0, 65573, -1610612736, 0, 65581, -1610612736, 0, 65589, -1610612736, 0, 65597, -1610612736, 0, 65601, -1610612736, 0, 65609, -1610612736, 0, 65617, -1610612736, 0, 65625, -1610612736, 0, 65633, -1610612736, 0, 65641, -1610612736, 0, 65648, -1610612736, 0, 196606, 1610612736, 0, 131191, 0, 0, 393335, 0, 0, 720894, 1610612736, 0, 917623, 0, 0, 1245182, 1610612736, 0, 1441911, 0, 0, 1769470, 1610612736, 0, 1966199, 0, 0, 2293758, 1610612736, 0, 2490487, 0, 0, 2818046, 1610612736, 0, 3014775, 0, 0, 3342334, 1610612736, 0, 3539063, 0, 0, 3866622, 1610612736, 0, 4128766, 1610612736, 0, 4063351, 0, 0, 4456448, -1073741824, 0, 4456456, -1073741824, 0, 4456464, -1073741824, 0, 4456472, -1073741824, 0, 4456480, -1073741824, 0, 4456488, -1073741824, 0, 4456496, -1073741824, 0, 4456504, -1073741824, 0, 4456512, -1073741824, 0, 4456520, -1073741824, 0, 4456528, -1073741824, 0, 4456536, -1073741824, 0, 4456544, -1073741824, 0, 4456552, -1073741824, 0, 4456560, -1073741824, 0 )
+
+[connection signal="pressed" from="backButton" to="." method="_on_backButton_pressed"]
+[connection signal="mouse_entered" from="GoToMotherLand" to="." method="_on_GoToMotherLand_mouse_entered"]
+[connection signal="pressed" from="GoToMotherLand" to="." method="_on_GoToMotherLand_pressed"]
+[connection signal="mouse_entered" from="GoToDarkLightForest" to="." method="_on_GoToDarkLightForest_mouse_entered"]
+[connection signal="pressed" from="GoToDarkLightForest" to="." method="_on_GoToDarkLightForest_pressed"]
+[connection signal="mouse_entered" from="GoToCatacombsOfAnihilation" to="." method="_on_GoToCatacombsOfAnihilation_mouse_entered"]
+[connection signal="pressed" from="GoToCatacombsOfAnihilation" to="." method="_on_GoToCatacombsOfAnihilation_pressed"]
+[connection signal="mouse_entered" from="GoToUnholyCemetery" to="." method="_on_GoToUnholyCemetery_mouse_entered"]
+[connection signal="pressed" from="GoToUnholyCemetery" to="." method="_on_GoToUnholyCemetery_pressed"]
+[connection signal="mouse_entered" from="GoToChurchOfTheDamned" to="." method="_on_GoToChurchOfTheDamned_mouse_entered"]
+[connection signal="pressed" from="GoToChurchOfTheDamned" to="." method="_on_GoToChurchOfTheDamned_pressed"]
+[connection signal="mouse_entered" from="GoToFortOfIllusion" to="." method="_on_GoToFortOfIllusion_mouse_entered"]
+[connection signal="pressed" from="GoToFortOfIllusion" to="." method="_on_GoToFortOfIllusion_pressed"]
+[connection signal="mouse_entered" from="GoToHallsOfStone" to="." method="_on_GoToHallsOfStone_mouse_entered"]
+[connection signal="pressed" from="GoToHallsOfStone" to="." method="_on_GoToHallsOfStone_pressed"]
+[connection signal="mouse_entered" from="GoToHomeLand" to="." method="_on_GoToHomeLand_mouse_entered"]
+[connection signal="pressed" from="GoToHomeLand" to="." method="_on_GoToHomeLand_pressed"]
+[connection signal="mouse_entered" from="GoToFinal" to="." method="_on_GoToFinal_mouse_entered"]
+[connection signal="pressed" from="GoToFinal" to="." method="_on_GoToFinal_pressed"]

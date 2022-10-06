@@ -15,3 +15,14 @@ func _ready():
 	Global.AIR_RESISTANCE = 1
 	Global.GRAVITY = 13
 	Global.JUMP_FORCE = 400
+
+func _process(delta):
+	
+	#Calls the dimension node
+	if Input.is_action_just_pressed("dimensions"):
+		GlobalDeckBuilder.sceneToReturnTo = get_filename()
+		get_tree().change_scene("res://DeckBuilder/Scenes/Dimensions.tscn")
+
+
+func _on_Area2D_body_entered(body):
+	GlobalTexts.dialogueStart = true

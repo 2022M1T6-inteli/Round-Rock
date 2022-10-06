@@ -14,6 +14,7 @@ func _ready():
 func _process(delta):
 	offset = Vector2(rand_range(-1, 1) * shakeAmount, rand_range(-1, 1) * shakeAmount)
 	
+#shake screen when a card is used when user kpi está completo
 func shake(time, amount):
 	timer.wait_time = time
 	shakeAmount = amount

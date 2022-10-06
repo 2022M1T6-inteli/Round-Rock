@@ -11,6 +11,7 @@ func _ready():
 	$shield.modulate.a = 0
 	$userKpi.value = 0
 
+#decrease hero health and shield when recive damage
 func decreaseLife(value):
 	if GlobalBattle.heroShield > 0:
 		if GlobalBattle.heroShield - value < 0:
@@ -27,6 +28,7 @@ func decreaseLife(value):
 		get_node("HealthBar/Tween").interpolate_property($HealthBar, "value", $HealthBar.value, GlobalBattle.heroLife, 0.5, Tween.TRANS_LINEAR, Tween.EASE_IN_OUT)
 		get_node("HealthBar/Tween").start()
 	$shield/Label.text = str(GlobalBattle.heroShield)
+
 
 func increaseLife(value):
 	GlobalBattle.heroLife = $HealthBar.value + value

@@ -6,6 +6,6 @@ extends Label
 # var b = "text"
 
 
-# Called when the node enters the scene tree for the first time.
+# Defines the text of the title label according to the selected dimension
 func _ready():
 	text = GlobalDeckBuilder.dimensionTexts[GlobalDeckBuilder.dimension]

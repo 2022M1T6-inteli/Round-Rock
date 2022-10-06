@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/settingsButtonhover.png-9ea82c770d58d7b7d096c5882412242f.stex"
+path="res://.import/settingsButtonHover.png-6ff51dca32c5745633f19d125498f4a9.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/borderButtons/settingsButtonhover.png"
-dest_files=[ "res://.import/settingsButtonhover.png-9ea82c770d58d7b7d096c5882412242f.stex" ]
+source_file="res://assets/borderButtons/settingsButtonHover.png"
+dest_files=[ "res://.import/settingsButtonHover.png-6ff51dca32c5745633f19d125498f4a9.stex" ]
 
 [params]
 

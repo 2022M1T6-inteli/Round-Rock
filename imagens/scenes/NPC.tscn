@@ -9,33 +9,33 @@
 [sub_resource type="StreamTexture" id=9]
 flags = 4
 
-[sub_resource type="AtlasTexture" id=10]
+[sub_resource type="AtlasTexture" id=63]
 atlas = ExtResource( 5 )
 region = Rect2( 0, 0, 69, 44 )
 
-[sub_resource type="AtlasTexture" id=11]
+[sub_resource type="AtlasTexture" id=64]
 atlas = ExtResource( 5 )
 region = Rect2( 69, 0, 69, 44 )
 
-[sub_resource type="AtlasTexture" id=12]
+[sub_resource type="AtlasTexture" id=65]
 atlas = ExtResource( 5 )
 region = Rect2( 138, 0, 69, 44 )
 
-[sub_resource type="AtlasTexture" id=13]
+[sub_resource type="AtlasTexture" id=66]
 atlas = ExtResource( 5 )
 region = Rect2( 207, 0, 69, 44 )
 
-[sub_resource type="AtlasTexture" id=14]
+[sub_resource type="AtlasTexture" id=59]
 atlas = ExtResource( 5 )
 region = Rect2( 276, 0, 69, 44 )
 
-[sub_resource type="AtlasTexture" id=15]
+[sub_resource type="AtlasTexture" id=67]
 atlas = ExtResource( 5 )
 region = Rect2( 345, 0, 69, 44 )
 
 [sub_resource type="SpriteFrames" id=8]
 animations = [ {
-"frames": [ SubResource( 10 ), SubResource( 11 ), SubResource( 12 ), SubResource( 13 ), SubResource( 14 ), SubResource( 15 ) ],
+"frames": [ SubResource( 63 ), SubResource( 64 ), SubResource( 65 ), SubResource( 66 ), SubResource( 59 ), SubResource( 67 ) ],
 "loop": true,
 "name": "default",
 "speed": 5.0
@@ -59,7 +59,7 @@ texture = SubResource( 9 )
 position = Vector2( -20.7403, -6.31372 )
 scale = Vector2( -2.81818, 3.25858 )
 frames = SubResource( 8 )
-frame = 2
+frame = 1
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Detect"]
