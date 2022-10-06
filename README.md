@@ -95,20 +95,24 @@ calmente.
 
 ## 🗃 Histórico de lançamentos
 
+* 1.0 - 06/09/2022
+  * Unificação do jogo com o deck builder
+  * Envio da última versão do GDD
+  * Protótipo final do jogo finalizado
 * 0.9 - 30/09/2022
   * Replicamento de código
   * Unificação de cenas
   * Correção de bugs
-  * Atualização e ajustes no GDD
+  * Atualização, ajustes no GDD e envio do mesmo
   * O terceiro lançamento adequado
   * Deploy no GitPages
 * 0.8 - 23/09/2022
   * Modularização do jogo
   * Correção de bugs
-  * Atualização no GDD
+  * Atualização no GDD e envio do mesmo
 * 0.7 - 16/09/2022
   * Correção de bugs
-  * Atualização no GDD
+  * Atualização no GDD e envio do mesmo
 * 0.6 - 09/09/2022
   * Primeira cena de jogo plataforma 2D e movimentação do personagem unidas
   * Melhoria na cena de batalha de cartas
