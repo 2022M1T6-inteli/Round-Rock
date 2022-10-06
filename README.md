@@ -75,11 +75,11 @@ Instruções para a configuração do ambiente de desenvolvimento:
 
 <b>Windows:</b>
 
-Não há instalação, apenas executável. Baixe os arquivos disponíveis em [https://github.com/2022M1T6/Projeto6/tree/main/executaveis/Windows]() e execute "Nome_do_seu_arquivo.exe" como qualquer outro programa.
+Não há instalação, apenas executável. Baixe os arquivos disponíveis em [https://github.com/2022M1T6/Projeto6/tree/main/executaveis/Windows]() e execute "CastleDell.exe" como qualquer outro programa.
 
 ```
-Observe que é necessário que o arquivo "Nome_do_seu_arquivo.pck" esteja
-no mesmo diretório que "Nome_do_seu_arquivo.exe" para que o jogo inicie
+Observe que é necessário que o arquivo "CastleDell.pck" esteja
+no mesmo diretório que "CastleDell.exe" para que o jogo inicie
 corretamente.
 ```
 
