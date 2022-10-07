@@ -175,7 +175,7 @@ stretch_mode = 6
 [node name="Archer" parent="." instance=ExtResource( 8 )]
 position = Vector2( 188, -844 )
 scale = Vector2( 3.0669, 3.13736 )
-frame = 3
+frame = 1
 
 [node name="hero" parent="." instance=ExtResource( 6 )]
 position = Vector2( 73, 247 )

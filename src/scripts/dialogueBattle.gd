@@ -11,14 +11,17 @@ func _ready():
 	#addDialog(GlobalTexts.dialogueMLB)
 	addDialog1()
 	load_dialogue()
+	GlobalTexts.endDialogue = false
+	GlobalTexts.dialogueStart = true
 
 func _process(_delta):
 	if Input.is_action_just_pressed("Next"):
+		print("apertei espaço")
 		if preBattle:
 			load_dialogue()
 		elif posBattle:
+			print("oi")
 			load_dialogueEnd()
-	print(get_tree().current_scene.name)
 
 #identify wich dialogue must be used
 func addDialog1():
@@ -84,7 +87,7 @@ func addDialog1():
 			
 			"HomeLandBattle":
 				dialogueInit = GlobalTexts.dialogueHLB_en
-#				dialogueEnd = GlobalTexts.dialogueHLBEnd_en
+				#dialogueEnd = GlobalTexts.dialogueHLBEnd_en
 
 			"FinalBattle":
 				dialogueInit = GlobalTexts.dialogueFinalB_en
@@ -119,11 +122,13 @@ func load_dialogue():
 		print("DEPOIS cart:",dialogue_list)
 		preBattle = false
 		dialogue_list = 0
-		#set_process(false)
+		set_process(false)
 	dialogue_list += 1
 	
 #load other dialogue
 func load_dialogueEnd():
+	set_process(true)
+	
 	visible = true
 	posBattle = true
 	if dialogue_list < dialogueEnd.size(): 
@@ -138,13 +143,15 @@ func load_dialogueEnd():
 		$Tween.start()
 		
 	if dialogue_list == dialogueEnd.size():
-		GlobalTexts.endDialogue = true
 		print(GlobalTexts.endDialogue)
 		posBattle = false
 		visible = false
 		dialogue_list = 0
-	
+		GlobalTexts.dialogueStart = false
+		GlobalTexts.endDialogue = true
+
 	dialogue_list += 1
+	
 	
 	
 func _on_Tween_tween_completed(_object, _key):

@@ -50,7 +50,7 @@ func instanceCard():
 	for card in cartas:
 		deck.append(card(card))
 	
-	#shuffle()
+	shuffle()
 	var x = 200
 	var y = 500
 	for i in range(0,7):

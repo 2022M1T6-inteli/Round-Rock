@@ -118,8 +118,9 @@ func _on_heroAnimation_animation_finished():
 
 func win():
 	if not GlobalBattle.enemyAlive:
-		if position == originalPosition:
-			yield(get_tree().create_timer(1.5), "timeout")
+		if position == originalPosition and GlobalTexts.dialogueStart:
+			get_parent().get_node("Control").load_dialogueEnd()
+		elif GlobalTexts.endDialogue:
 			moveFoward = true
 		if position.x > 1200:
 				TransitionScreen.FadeInto(sceneToGo)
