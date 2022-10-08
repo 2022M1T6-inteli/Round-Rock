@@ -26,7 +26,7 @@ Ensinar através de um jogo lúdico de cartas de raciocínio e lógica, estilo m
 
 ## 🎮 Jogue agora
 
-Para acessar o jogo diretamente do seu navegador entre no seguinte link: [http://itch.io/link-do-seu-jogo](http://itch.io/)
+Para acessar o jogo diretamente do seu navegador entre no seguinte link: [http://itch.io/link-do-seu-jogo](https://2022m1t6.github.io/Projeto6/)
 
 ## 📁 Estrutura de pastas
 
@@ -75,7 +75,7 @@ Instruções para a configuração do ambiente de desenvolvimento:
 
 <b>Windows:</b>
 
-Não há instalação, apenas executável. Baixe os arquivos disponíveis em [https://github.com/2022M1T6/Projeto6/tree/main/executaveis/Windows]() e execute "CastleDell.exe" como qualquer outro programa.
+Não há instalação, apenas executável. Baixe os arquivos disponíveis em [https://github.com/2022M1T6/Projeto6/tree/main/executaveis/Windows](https://github.com/2022M1T6/Projeto6/tree/main/executaveis/Windows) e execute "CastleDell.exe" como qualquer outro programa.
 
 ```
 Observe que é necessário que o arquivo "CastleDell.pck" esteja
@@ -85,7 +85,7 @@ corretamente.
 
 <b>HTML:</b>
 
-Não há instalação! Baixe os arquivos disponíveis em [https://github.com/2022M1T6/Projeto6/tree/main/executaveis/HTML]() e execute-o como uma página da web (através de algum navegador).
+Não há instalação! Baixe os arquivos disponíveis em [https://github.com/2022M1T6/Projeto6/tree/main/executaveis/HTML](https://github.com/2022M1T6/Projeto6/tree/main/executaveis/HTML) e execute-o como uma página da web (através de algum navegador).
 
 ```sh
 Dependendo de suas configurações de firewall, talvez seja necessário
