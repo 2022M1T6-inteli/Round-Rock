@@ -4,12 +4,6 @@
 <a href= "https://www.inteli.edu.br/"><img src="https://www.inteli.edu.br/wp-content/uploads/2021/08/20172028/marca_1-2.png" alt="Inteli - Instituto de Tecnologia e Liderança" border="0"></a>
 </p>
 
-# CastleDell
-<img src="https://user-images.githubusercontent.com/110630077/192343527-26b8b758-5689-4db3-9931-d19c1aab33ff.png" alt="CastleDell" border="0">
-
-## Round Rock
-<img src="https://user-images.githubusercontent.com/110630077/192342953-a32f3547-0c9b-4734-b3d9-a85f759b3b1e.png" alt="Round Rock" border="0">
-
 ## Integrantes:
 - <a href="https://www.linkedin.com/in/enya-oliveira-636566240/">Enya Oliveira Arruda</a>
 - <a href="https://www.linkedin.com/in/fabio-piemonte-823a65211/">Fabio Piemonte Lopes</a>
@@ -30,6 +24,7 @@ Para acessar o jogo diretamente do seu navegador entre no seguinte link: [https:
 
 ## 📁 Estrutura de pastas
 
+|--> docs
 |--> documentos<br>
   &emsp;|--> outros <br>
   &emsp;| T6_G6_Game_Design_Document.docx<br>
@@ -43,21 +38,23 @@ Para acessar o jogo diretamente do seu navegador entre no seguinte link: [https:
 
 Dentre os arquivos e pastas presentes na raiz do projeto, definem-se:
 
-- <b>readme.md</b>: arquivo que serve como guia e explicação geral sobre o projeto (o mesmo que você está lendo agora).
+- <b>docs</b>: Aqui serão colocados os arquivos compilados em HTML do jogo.<br>
 
-- <b>documentos</b>: aqui estão todos os documentos relacionados ao projeto. Há também uma pasta denominada <b>outros</b> que contém documentos complementares ao <b>Game Design Document</b>.
+- <b>documentos</b>: Aqui estão todos os documentos relacionados ao projeto. Há também uma pasta denominada <b>outros</b> que contém documentos complementares ao <b>Game Design Document</b>.
 
-- <b>executáveis</b>: aqui dispoõem-se todos os executáveis do jogo, prontos para rodar, distribuídos entre duas subpastas: uma para binários windows e uma para a web.
+- <b>executáveis</b>: Aqui dispoõem-se todos os executáveis do jogo, prontos para rodar, distribuídos entre duas subpastas: uma para binários windows e uma para a web.
 
-- <b>imagens</b>: imagens relacionadas ao projeto como um todo (por exemplo imagens do sistema, do grupo, logotipos e afins).
+- <b>imagens</b>: Imagens relacionadas ao projeto como um todo (por exemplo imagens do sistema, do grupo, logotipos e afins).
 
-- <b>src</b>: nesta pasta encontra-se todo o código fonte do game, pronto para ser baixado e modificado.
+- <b>src</b>: Nesta pasta encontra-se todo o código fonte do game, pronto para ser baixado e modificado.
+
+- <b>readme.md</b>: Arquivo que serve como guia e explicação geral sobre o projeto (o mesmo que você está lendo agora).
 
 ## 💻 Configuração para Desenvolvimento
 
-1 - Faça o download do GODOT e deste repositório.
-2 - Abra o GODOT, ao ser prontificado clique em IMPORTAR.
-3 - Selecione a pasta onde descompactou este repositório.
+1 - Faça o download do GODOT e deste repositório.<br>
+2 - Abra o GODOT, ao ser prontificado clique em IMPORTAR.<br>
+3 - Selecione a pasta onde descompactou este repositório.<br>
 
 -<a href="https://godotengine.org/download"> Godot</a>
 
@@ -135,11 +132,5 @@ calmente.
   * Criação do repositório
 
 ## 📋 Licença/License
-
-<p xmlns:cc="http://creativecommons.org/ns#" xmlns:dct="http://purl.org/dc/terms/"><a property="dct:title" rel="cc:attributionURL" href="https://github.com/2022M1T6/Projeto6">CastleDell</a> by <a rel="cc:attributionURL dct:creator" property="cc:attributionName" href="https://github.com/2022M1T6/Projeto6">INTELI, Enya Oliveira Arruda, Fabio Piemonte Lopes, Giuliano Bontempo Domiciano, Luis Carlos Miranda Junior, Marcelo Maia Fernandes Filho, Mauricio Trapnell Felicissimo, Raab Iane Assunção Silva, Vitor Hugo Rodrigues dos Santos</a> is licensed under <a href="http://creativecommons.org/licenses/by/4.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer" style="display:inline-block;">Attribution 4.0 International<img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1"><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1"></a></p>
-
-## 🎓 Referências
-
-Aqui estão as referências usadas no projeto.
-
-1. <https://creativecommons.org/share-your-work/>
+<img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1"> <img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1">
+<p xmlns:cc="http://creativecommons.org/ns#" xmlns:dct="http://purl.org/dc/terms/"><a property="dct:title" rel="cc:attributionURL" href="https://github.com/2022M1T6-inteli/Round-Rock">Round-Rock</a> by <a rel="cc:attributionURL dct:creator" property="cc:attributionName" href="https://github.com/InteliProjects">Inteli</a>, <a href="https://www.linkedin.com/in/enya-oliveira-636566240/">Enya Oliveira Arruda</a>, <a href="https://www.linkedin.com/in/fabio-piemonte-823a65211/">Fabio Piemonte Lopes</a>, <a href="https://www.linkedin.com/in/giuliano-bontempo-domiciano-5b5766212/">Giuliano Bontempo Domiciano</a>, <a href="https://www.linkedin.com/in/luis-miranda-137566139/">Luis Carlos Miranda Junior</a>, <a href="https://www.linkedin.com/in/marcelo-maia-b90b03231/">Marcelo Maia Fernandes Filho</a>, <a href="https://www.linkedin.com/in/mauricio-felicissimo-475024240/">Mauricio Trapnell Felicissimo</a>, <a href="https://www.linkedin.com/in/raab-iane/">Raab Iane Assunção Silva</a>, <a href="https://www.linkedin.com/in/vitor-santos-851408196/">Vitor Hugo Rodrigues dos Santos</a> is licensed under <a href="http://creativecommons.org/licenses/by/4.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer" style="display:inline-block;">Attribution 4.0 International</a>.</p>
