@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Bringer-of-Death-SpritSheet.png-82a43e14e452af0af9f1b1d5fddeb11d.stex"
+path="res://.import/Bringer-of-Death-SpritSheet.png-ab2b93ff68090c8055f243c3f67e7c6e.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/bringer/Bringer-of-Death-SpritSheet.png"
-dest_files=[ "res://.import/Bringer-of-Death-SpritSheet.png-82a43e14e452af0af9f1b1d5fddeb11d.stex" ]
+source_file="res://assets/Bringer/Bringer-of-Death-SpritSheet.png"
+dest_files=[ "res://.import/Bringer-of-Death-SpritSheet.png-ab2b93ff68090c8055f243c3f67e7c6e.stex" ]
 
 [params]
 
