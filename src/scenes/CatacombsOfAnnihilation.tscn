@@ -1750,7 +1750,7 @@ scale = Vector2( 0.964054, 1.1313 )
 [node name="AnimatedSprite" type="AnimatedSprite" parent="Area2D2"]
 position = Vector2( -7.62939e-06, 0 )
 frames = SubResource( 61 )
-frame = 1
+frame = 5
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D2"]
@@ -1768,7 +1768,7 @@ rect_scale = Vector2( 0.77647, 0.741176 )
 [node name="puffle" parent="." instance=ExtResource( 23 )]
 position = Vector2( 206.471, 453.529 )
 scale = Vector2( 0.05, 0.05 )
-frame = 30
+frame = 12
 
 [node name="CanvasLayer" parent="." instance=ExtResource( 26 )]
 

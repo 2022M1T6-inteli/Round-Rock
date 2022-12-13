@@ -118,7 +118,7 @@ stretch_mode = 6
 position = Vector2( 874, 313 )
 scale = Vector2( 1.7, 1.7 )
 z_index = -1
-frame = 0
+frame = 5
 
 [node name="hero" parent="." instance=ExtResource( 7 )]
 position = Vector2( 73, 252 )

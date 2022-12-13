@@ -87,7 +87,7 @@ shape = SubResource( 1 )
 position = Vector2( 5.96046e-08, 0 )
 rotation = 5.23599
 frames = SubResource( 16 )
-frame = 10
+frame = 3
 playing = true
 
 [connection signal="area_entered" from="." to="." method="_on_branch_area_entered"]

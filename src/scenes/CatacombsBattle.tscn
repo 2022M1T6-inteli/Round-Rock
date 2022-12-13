@@ -1200,7 +1200,7 @@ position = Vector2( 853, 246 )
 scale = Vector2( 3, 3 )
 z_index = -1
 animation = "idle"
-frame = 0
+frame = 4
 
 [node name="hero" parent="." instance=ExtResource( 22 )]
 position = Vector2( 72, 240 )

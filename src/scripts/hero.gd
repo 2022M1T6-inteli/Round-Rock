@@ -32,7 +32,6 @@ func damage():
 	
 func run():
 	$heroAnimation.animation = "run"
-	$run.play()
 
 func handsUp():
 	$heroAnimation.animation = "handsUp"
@@ -102,7 +101,6 @@ func _on_hurtBox_area_entered(area):
 		elif GlobalBattle.sanctuary:
 			yield(get_tree().create_timer(0.5), "timeout")
 		damage()
-		$damage.play()
 		decreaseLife(GlobalBattle.enemyDamage)
 
 #when an animation is over set the hero into a different state

@@ -222,7 +222,7 @@ stretch_mode = 6
 [node name="Bringer" parent="." instance=ExtResource( 15 )]
 position = Vector2( 901, 243 )
 scale = Vector2( 3, 3 )
-frame = 5
+frame = 7
 
 [node name="hero" parent="." instance=ExtResource( 10 )]
 position = Vector2( 72, 240 )
