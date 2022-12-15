@@ -25,7 +25,7 @@ Ensinar através de um jogo lúdico de cartas de raciocínio e lógica, estilo m
 
 ## 🎮 Jogue agora
 
-Para acessar o jogo diretamente do seu navegador entre no seguinte link: [https://2022m1t6.github.io/Projeto6/](https://2022m1t6.github.io/Projeto6/)
+Para acessar o jogo diretamente do seu navegador entre no seguinte link: [Round-Rock](https://2022m1t6-inteli.github.io/Round-Rock/)
 
 ## 📁 Estrutura de pastas
 
